@@ -29,6 +29,48 @@ html
                 }
             }
         }
+
+        async function advancedFilter() {
+    const codeType = document.getElementById('codeType').value;
+    const filterId = document.getElementById('filterId').value;
+    const filterTitle = document.getElementById('filterTitle').value.toLowerCase();
+    const filterContent = document.getElementById('filterContent').value.toLowerCase();
+    
+    try {
+        const response = await fetch(`api/${codeType}.json`);
+        const data = await response.json();
+        const items = data[codeType];
+        
+        const filteredItems = items.filter(item => {
+            return (!filterId || item.id == filterId) &&
+                   (!filterTitle || item.title.toLowerCase().includes(filterTitle)) &&
+                   (!filterContent || item.content.toLowerCase().includes(filterContent));
+        });
+        
+        displayAdvancedResults(filteredItems, codeType);
+    } catch (error) {
+        document.getElementById('results').innerHTML = 
+            `<div class="result error">Error: ${error.message}</div>`;
+    }
+}
+
+function displayAdvancedResults(items, codeType) {
+    const resultsDiv = document.getElementById('results');
+    
+    if (items.length > 0) {
+        resultsDiv.innerHTML = `<h3>Found ${items.length} items in ${codeType.replace(/_/g, ' ')}:</h3>`;
+        items.forEach(item => {
+            resultsDiv.innerHTML += `
+                <div class="result">
+                    <strong>ID ${item.id}: ${item.title}</strong>
+                    <p>${item.content}</p>
+                </div>
+            `;
+        });
+    } else {
+        resultsDiv.innerHTML = `<div class="result">No items found matching your criteria</div>`;
+    }
+}
         
         // Check endpoints when page loads
         window.addEventListener('load', checkEndpoints);
@@ -44,5 +86,17 @@ html
     
     <h2>Endpoint Status:</h2>
     <ul id="status-list"></ul>
+    <div class="filter-section">
+    <h2>Advanced Filter</h2>
+    <input type="number" id="filterId" placeholder="ID">
+    <input type="text" id="filterTitle" placeholder="Title contains...">
+    <input type="text" id="filterContent" placeholder="Content contains...">
+    <select id="codeType">
+        <option value="civil_and_commercial_code">Civil and Commercial Code</option>
+        <option value="criminal_code">Criminal Code</option>
+        <option value="civil_procedure_code">Civil Procedure Code</option>
+    </select>
+    <button onclick="advancedFilter()">Advanced Filter</button>
+</div>
 </body>
 </html>
