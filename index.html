@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON API</title>
+</head>
+<body>
+    <script>
+        // Enable CORS and serve JSON
+        const jsonData = {
+            "api": {
+                "civil_and_commercial_code": "/api/v1/civil_and_commercial_code.json",
+                "criminal_code": "/api/v1/criminal_code.json",
+                "civil_procedure_code": "/api/v1/civil_procedure_code.json"
+            },
+            "documentation": "Access endpoints directly via GitHub Pages"
+        };
+        
+        // If accessed via fetch, return JSON
+        if (window.location.search.includes('?json')) {
+            const data = JSON.stringify(jsonData, null, 2);
+            document.write(`<pre>${data}</pre>`);
+        }
+    </script>
+    
+    <h1>JSON API via GitHub</h1>
+    <p>Access your JSON endpoints directly:</p>
+    <ul>
+        <li><a href="/api/v1/civil_and_commercial_code.json">/api/v1/civil_and_commercial_code.json</a></li>
+        <li><a href="/api/v1/criminal_code.json">/api/v1/criminal_code.json</a></li>
+        <li><a href="/api/v1/criminal_code.json">/api/v1/criminal_code.json</a></li>
+    </ul>
+</body>
+</html>
