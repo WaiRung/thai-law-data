@@ -53,9 +53,33 @@ module.exports = async (req, res) => {
         }
         if (filter_content) {
             const contentLower = filter_content.toLowerCase();
-            items = items.filter(item => 
-                item.content && item.content.toLowerCase().includes(contentLower)
-            );
+            items = items.filter(item => {
+                if (!item.content) return false;
+                
+                // Handle string content
+                if (typeof item.content === 'string') {
+                    return item.content.toLowerCase().includes(contentLower);
+                }
+                
+                // Handle object content with paragraphs
+                if (item.content.paragraphs && Array.isArray(item.content.paragraphs)) {
+                    return item.content.paragraphs.some(paragraph => {
+                        // Check paragraph content
+                        if (paragraph.content && paragraph.content.toLowerCase().includes(contentLower)) {
+                            return true;
+                        }
+                        // Check subsections
+                        if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                            return paragraph.subsections.some(subsection => 
+                                subsection.content && subsection.content.toLowerCase().includes(contentLower)
+                            );
+                        }
+                        return false;
+                    });
+                }
+                
+                return false;
+            });
         }
 
         // Apply search (searches across all text fields)
@@ -63,8 +87,32 @@ module.exports = async (req, res) => {
             const searchLower = search.toLowerCase();
             items = items.filter(item => {
                 const titleMatch = item.title && item.title.toLowerCase().includes(searchLower);
-                const contentMatch = item.content && item.content.toLowerCase().includes(searchLower);
                 const idMatch = item.id && item.id.toString().includes(searchLower);
+                
+                let contentMatch = false;
+                if (item.content) {
+                    // Handle string content
+                    if (typeof item.content === 'string') {
+                        contentMatch = item.content.toLowerCase().includes(searchLower);
+                    }
+                    // Handle object content with paragraphs
+                    else if (item.content.paragraphs && Array.isArray(item.content.paragraphs)) {
+                        contentMatch = item.content.paragraphs.some(paragraph => {
+                            // Check paragraph content
+                            if (paragraph.content && paragraph.content.toLowerCase().includes(searchLower)) {
+                                return true;
+                            }
+                            // Check subsections
+                            if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                                return paragraph.subsections.some(subsection => 
+                                    subsection.content && subsection.content.toLowerCase().includes(searchLower)
+                                );
+                            }
+                            return false;
+                        });
+                    }
+                }
+                
                 return titleMatch || contentMatch || idMatch;
             });
         }

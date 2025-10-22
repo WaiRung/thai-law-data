@@ -42,19 +42,55 @@ async function getAllData() {
     }
 }
 
-function formatContent(content) {
+function escapeHtml(text) {
     // Escape HTML to prevent XSS
-    const escaped = content
+    return text
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
-    
+}
+
+function formatContentText(text) {
     // Convert newlines and tabs to HTML
-    return escaped
+    return escapeHtml(text)
         .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // Convert tabs to 4 spaces
         .replace(/\n/g, '<br>'); // Convert newlines to <br>
+}
+
+function formatContent(content) {
+    // Handle both old string format and new object format
+    if (typeof content === 'string') {
+        return formatContentText(content);
+    }
+    
+    // New format with paragraphs
+    if (content && content.paragraphs && Array.isArray(content.paragraphs)) {
+        let html = '';
+        content.paragraphs.forEach(paragraph => {
+            html += `<div class="paragraph">`;
+            html += `<div class="paragraph-content">${formatContentText(paragraph.content)}</div>`;
+            
+            // Add subsections if they exist
+            if (paragraph.subsections && paragraph.subsections.length > 0) {
+                html += `<div class="subsections">`;
+                paragraph.subsections.forEach(subsection => {
+                    html += `<div class="subsection">`;
+                    html += `<span class="subsection-id">(${subsection.id})</span> `;
+                    html += `<span class="subsection-content">${formatContentText(subsection.content)}</span>`;
+                    html += `</div>`;
+                });
+                html += `</div>`;
+            }
+            
+            html += `</div>`;
+        });
+        return html;
+    }
+    
+    // Fallback for any other format
+    return formatContentText(String(content));
 }
 
 function displayResults(data, codeType, showAll = false) {
@@ -82,6 +118,34 @@ function displayResults(data, codeType, showAll = false) {
     }
 }
 
+function searchInContent(content, searchText) {
+    if (!content) return false;
+    
+    // Handle string content
+    if (typeof content === 'string') {
+        return content.toLowerCase().includes(searchText);
+    }
+    
+    // Handle object content with paragraphs
+    if (content.paragraphs && Array.isArray(content.paragraphs)) {
+        return content.paragraphs.some(paragraph => {
+            // Check paragraph content
+            if (paragraph.content && paragraph.content.toLowerCase().includes(searchText)) {
+                return true;
+            }
+            // Check subsections
+            if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                return paragraph.subsections.some(subsection => 
+                    subsection.content && subsection.content.toLowerCase().includes(searchText)
+                );
+            }
+            return false;
+        });
+    }
+    
+    return false;
+}
+
 async function advancedFilter() {
     const codeType = document.getElementById('codeType').value;
     const filterId = document.getElementById('filterId').value;
@@ -96,7 +160,7 @@ async function advancedFilter() {
         const filteredItems = items.filter(item => {
             return (!filterId || item.id == filterId) &&
                    (!filterTitle || item.title.toLowerCase().includes(filterTitle)) &&
-                   (!filterContent || item.content.toLowerCase().includes(filterContent));
+                   (!filterContent || searchInContent(item.content, filterContent));
         });
         
         displayAdvancedResults(filteredItems, codeType);

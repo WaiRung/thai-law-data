@@ -7,6 +7,27 @@ input, button { padding: 8px; margin: 5px; }
     white-space: pre-wrap; /* Preserve whitespace and wrap text */
     word-wrap: break-word; /* Break long words if needed */
 }
+.paragraph {
+    margin-bottom: 15px;
+}
+.paragraph-content {
+    margin-bottom: 10px;
+}
+.subsections {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.subsection {
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+.subsection-id {
+    font-weight: bold;
+    color: #007cba;
+}
+.subsection-content {
+    margin-left: 5px;
+}
 .pagination { margin: 20px 0; padding: 15px; background: #f5f5f5; text-align: center; }
 .pagination button { margin: 0 5px; padding: 8px 16px; cursor: pointer; }
 .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
