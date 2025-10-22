@@ -42,6 +42,21 @@ async function getAllData() {
     }
 }
 
+function formatContent(content) {
+    // Escape HTML to prevent XSS
+    const escaped = content
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    
+    // Convert newlines and tabs to HTML
+    return escaped
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // Convert tabs to 4 spaces
+        .replace(/\n/g, '<br>'); // Convert newlines to <br>
+}
+
 function displayResults(data, codeType, showAll = false) {
     const resultsDiv = document.getElementById('results');
     
@@ -58,7 +73,7 @@ function displayResults(data, codeType, showAll = false) {
                 <h3>Found in ${codeType.replace(/_/g, ' ')}:</h3>
                 <div class="result">
                     <strong>ID ${data.id}: ${data.title}</strong>
-                    <p>${data.content}</p>
+                    <div class="content">${formatContent(data.content)}</div>
                 </div>
             `;
         } else {
@@ -128,7 +143,7 @@ function renderPaginatedResults() {
         resultsDiv.innerHTML += `
             <div class="result">
                 <strong>ID ${item.id}: ${item.title}</strong>
-                <p>${item.content}</p>
+                <div class="content">${formatContent(item.content)}</div>
             </div>
         `;
     });
