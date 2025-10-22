@@ -6,6 +6,11 @@
         .filter-section { margin: 20px 0; padding: 15px; background: #f5f5f5; }
         input, button { padding: 8px; margin: 5px; }
         .result { margin: 10px 0; padding: 10px; border-left: 3px solid #007cba; }
+        .pagination { margin: 20px 0; padding: 15px; background: #f5f5f5; text-align: center; }
+        .pagination button { margin: 0 5px; padding: 8px 16px; cursor: pointer; }
+        .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .pagination .page-info { display: inline-block; margin: 0 15px; font-weight: bold; }
+        .pagination select { padding: 8px; margin: 0 5px; }
     </style>
 </head>
 <body>
@@ -25,8 +30,34 @@
         <button onclick="advancedFilter()">Advanced Filter</button>
     </div>
 
+    <!-- Pagination Controls -->
+    <div class="pagination" id="paginationTop" style="display: none;">
+        <label for="pageSize">Items per page:</label>
+        <select id="pageSize" onchange="changePageSize()">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="all">All</option>
+        </select>
+        <button onclick="goToPage(1)" id="firstBtn">First</button>
+        <button onclick="previousPage()" id="prevBtn">Previous</button>
+        <span class="page-info" id="pageInfo">Page 1 of 1</span>
+        <button onclick="nextPage()" id="nextBtn">Next</button>
+        <button onclick="goToPage(totalPages)" id="lastBtn">Last</button>
+    </div>
+
     <!-- Results Section -->
     <div id="results"></div>
+
+    <!-- Pagination Controls (Bottom) -->
+    <div class="pagination" id="paginationBottom" style="display: none;">
+        <button onclick="goToPage(1)" id="firstBtnBottom">First</button>
+        <button onclick="previousPage()" id="prevBtnBottom">Previous</button>
+        <span class="page-info" id="pageInfoBottom">Page 1 of 1</span>
+        <button onclick="nextPage()" id="nextBtnBottom">Next</button>
+        <button onclick="goToPage(totalPages)" id="lastBtnBottom">Last</button>
+    </div>
 
     <!-- Direct Links -->
     <h2>Direct Access:</h2>
@@ -37,6 +68,13 @@
     </ul>
 
     <script>
+        // Pagination state
+        let currentPage = 1;
+        let pageSize = 10;
+        let totalPages = 1;
+        let allItems = [];
+        let currentCodeType = '';
+
         async function filterById() {
             const id = document.getElementById('filterId').value;
             const codeType = document.getElementById('codeType').value;
@@ -78,16 +116,13 @@
             const resultsDiv = document.getElementById('results');
             
             if (showAll) {
-                resultsDiv.innerHTML = `<h3>All ${codeType.replace(/_/g, ' ')} (${data.length} items):</h3>`;
-                data.forEach(item => {
-                    resultsDiv.innerHTML += `
-                        <div class="result">
-                            <strong>ID ${item.id}: ${item.title}</strong>
-                            <p>${item.content}</p>
-                        </div>
-                    `;
-                });
+                allItems = data;
+                currentCodeType = codeType;
+                currentPage = 1;
+                renderPaginatedResults();
             } else {
+                // Single item result - no pagination needed
+                hidePagination();
                 if (data) {
                     resultsDiv.innerHTML = `
                         <h3>Found in ${codeType.replace(/_/g, ' ')}:</h3>
@@ -129,18 +164,99 @@ function displayAdvancedResults(items, codeType) {
     const resultsDiv = document.getElementById('results');
     
     if (items.length > 0) {
-        resultsDiv.innerHTML = `<h3>Found ${items.length} items in ${codeType.replace(/_/g, ' ')}:</h3>`;
-        items.forEach(item => {
-            resultsDiv.innerHTML += `
-                <div class="result">
-                    <strong>ID ${item.id}: ${item.title}</strong>
-                    <p>${item.content}</p>
-                </div>
-            `;
-        });
+        allItems = items;
+        currentCodeType = codeType;
+        currentPage = 1;
+        renderPaginatedResults();
     } else {
+        hidePagination();
         resultsDiv.innerHTML = `<div class="result">No items found matching your criteria</div>`;
     }
+}
+
+function renderPaginatedResults() {
+    const resultsDiv = document.getElementById('results');
+    
+    // Calculate pagination
+    const pageSizeValue = document.getElementById('pageSize').value;
+    pageSize = pageSizeValue === 'all' ? allItems.length : parseInt(pageSizeValue);
+    totalPages = Math.ceil(allItems.length / pageSize);
+    
+    // Ensure current page is valid
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+    
+    // Calculate start and end indices
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, allItems.length);
+    const itemsToShow = allItems.slice(startIndex, endIndex);
+    
+    // Display results
+    resultsDiv.innerHTML = `<h3>Found ${allItems.length} items in ${currentCodeType.replace(/_/g, ' ')} (Showing ${startIndex + 1}-${endIndex}):</h3>`;
+    itemsToShow.forEach(item => {
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>ID ${item.id}: ${item.title}</strong>
+                <p>${item.content}</p>
+            </div>
+        `;
+    });
+    
+    // Update pagination controls
+    updatePaginationControls();
+}
+
+function updatePaginationControls() {
+    const pageInfo = `Page ${currentPage} of ${totalPages}`;
+    document.getElementById('pageInfo').textContent = pageInfo;
+    document.getElementById('pageInfoBottom').textContent = pageInfo;
+    
+    // Update button states
+    const isFirstPage = currentPage === 1;
+    const isLastPage = currentPage === totalPages;
+    
+    document.getElementById('firstBtn').disabled = isFirstPage;
+    document.getElementById('prevBtn').disabled = isFirstPage;
+    document.getElementById('nextBtn').disabled = isLastPage;
+    document.getElementById('lastBtn').disabled = isLastPage;
+    
+    document.getElementById('firstBtnBottom').disabled = isFirstPage;
+    document.getElementById('prevBtnBottom').disabled = isFirstPage;
+    document.getElementById('nextBtnBottom').disabled = isLastPage;
+    document.getElementById('lastBtnBottom').disabled = isLastPage;
+    
+    // Show pagination controls
+    document.getElementById('paginationTop').style.display = 'block';
+    document.getElementById('paginationBottom').style.display = 'block';
+}
+
+function hidePagination() {
+    document.getElementById('paginationTop').style.display = 'none';
+    document.getElementById('paginationBottom').style.display = 'none';
+}
+
+function goToPage(page) {
+    currentPage = page;
+    renderPaginatedResults();
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderPaginatedResults();
+    }
+}
+
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderPaginatedResults();
+    }
+}
+
+function changePageSize() {
+    currentPage = 1;
+    renderPaginatedResults();
 }
     </script>
 </body>
