@@ -41,6 +41,27 @@ module.exports = async (req, res) => {
             });
         }
 
+        // Helper function to search within nested content structure
+        function searchInContent(content, searchText) {
+            if (typeof content === 'object' && content.paragraphs) {
+                for (const paragraph of content.paragraphs) {
+                    if (paragraph.content.toLowerCase().includes(searchText)) {
+                        return true;
+                    }
+                    if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                        for (const subsection of paragraph.subsections) {
+                            if (subsection.content.toLowerCase().includes(searchText)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+            // Fallback for old format (string content)
+            return String(content).toLowerCase().includes(searchText);
+        }
+
         // Apply filters
         if (filter_id) {
             items = items.filter(item => item.id == filter_id);
@@ -54,7 +75,7 @@ module.exports = async (req, res) => {
         if (filter_content) {
             const contentLower = filter_content.toLowerCase();
             items = items.filter(item => 
-                item.content && item.content.toLowerCase().includes(contentLower)
+                item.content && searchInContent(item.content, contentLower)
             );
         }
 
@@ -63,7 +84,7 @@ module.exports = async (req, res) => {
             const searchLower = search.toLowerCase();
             items = items.filter(item => {
                 const titleMatch = item.title && item.title.toLowerCase().includes(searchLower);
-                const contentMatch = item.content && item.content.toLowerCase().includes(searchLower);
+                const contentMatch = item.content && searchInContent(item.content, searchLower);
                 const idMatch = item.id && item.id.toString().includes(searchLower);
                 return titleMatch || contentMatch || idMatch;
             });

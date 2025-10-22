@@ -7,6 +7,18 @@ input, button { padding: 8px; margin: 5px; }
     white-space: pre-wrap; /* Preserve whitespace and wrap text */
     word-wrap: break-word; /* Break long words if needed */
 }
+.paragraph { 
+    margin-bottom: 15px; 
+}
+.subsections { 
+    margin-left: 20px; 
+    margin-top: 10px; 
+}
+.subsection { 
+    margin-bottom: 10px; 
+    padding-left: 10px; 
+    border-left: 2px solid #ccc; 
+}
 .pagination { margin: 20px 0; padding: 15px; background: #f5f5f5; text-align: center; }
 .pagination button { margin: 0 5px; padding: 8px 16px; cursor: pointer; }
 .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
