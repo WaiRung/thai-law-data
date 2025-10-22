@@ -6,3 +6,8 @@ input, button { padding: 8px; margin: 5px; }
 .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
 .pagination .page-info { display: inline-block; margin: 0 15px; font-weight: bold; }
 .pagination select { padding: 8px; margin: 0 5px; }
+.api-info { margin: 20px 0; padding: 20px; background: #e7f3ff; border: 2px solid #007cba; border-radius: 5px; }
+.api-info h3 { margin-top: 15px; color: #005a8c; }
+.api-info code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+.api-info ul { list-style-type: disc; margin-left: 20px; }
+.api-info li { margin: 5px 0; }
