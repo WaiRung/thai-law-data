@@ -60,10 +60,43 @@ jsonFiles.forEach(filePath => {
             data[expectedKey].forEach((item, index) => {
                 if (!item.id || !item.title || !item.content) {
                     allItemsValid = false;
-                    console.error(`    Item ${index} missing required properties`);
+                    console.error(`    Item ${index} missing required properties (id, title, content)`);
                 }
             });
             assert(allItemsValid, `  All items have required properties (id, title, content)`);
+            
+            // Test 7: Content is an object with paragraphs array
+            let allContentValid = true;
+            data[expectedKey].forEach((item, index) => {
+                if (typeof item.content !== 'object' || !Array.isArray(item.content.paragraphs)) {
+                    allContentValid = false;
+                    console.error(`    Item ${index} content is not an object with paragraphs array`);
+                }
+            });
+            assert(allContentValid, `  All items have content.paragraphs array`);
+            
+            // Test 8: Each paragraph has required properties
+            let allParagraphsValid = true;
+            data[expectedKey].forEach((item, itemIndex) => {
+                if (item.content && Array.isArray(item.content.paragraphs)) {
+                    item.content.paragraphs.forEach((para, paraIndex) => {
+                        if (!para.id || !para.content || para.subsections === undefined) {
+                            allParagraphsValid = false;
+                            console.error(`    Item ${itemIndex}, paragraph ${paraIndex} missing required properties`);
+                        }
+                        // If subsections exist, validate them
+                        if (para.subsections && Array.isArray(para.subsections)) {
+                            para.subsections.forEach((sub, subIndex) => {
+                                if (!sub.id || !sub.content) {
+                                    allParagraphsValid = false;
+                                    console.error(`    Item ${itemIndex}, paragraph ${paraIndex}, subsection ${subIndex} missing required properties`);
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+            assert(allParagraphsValid, `  All paragraphs and subsections have required properties`);
         }
     } catch (error) {
         assert(false, `  Error processing ${filePath}: ${error.message}`);

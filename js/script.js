@@ -42,19 +42,56 @@ async function getAllData() {
     }
 }
 
-function formatContent(content) {
+function escapeHtml(text) {
     // Escape HTML to prevent XSS
-    const escaped = content
+    return text
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
+}
+
+function formatContent(content) {
+    // Handle new nested structure
+    if (typeof content === 'object' && content.paragraphs) {
+        let html = '';
+        content.paragraphs.forEach((paragraph, index) => {
+            const escaped = escapeHtml(paragraph.content)
+                .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+                .replace(/\n/g, '<br>');
+            
+            html += `<div class="paragraph">`;
+            if (content.paragraphs.length > 1) {
+                html += `<strong>Paragraph ${paragraph.id}:</strong><br>`;
+            }
+            html += escaped;
+            
+            // Handle subsections if they exist
+            if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                html += '<div class="subsections">';
+                paragraph.subsections.forEach((subsection) => {
+                    const subEscaped = escapeHtml(subsection.content)
+                        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+                        .replace(/\n/g, '<br>');
+                    html += `<div class="subsection">`;
+                    html += `<strong>Subsection ${subsection.id}:</strong><br>`;
+                    html += subEscaped;
+                    html += `</div>`;
+                });
+                html += '</div>';
+            }
+            
+            html += `</div>`;
+        });
+        return html;
+    }
     
-    // Convert newlines and tabs to HTML
-    return escaped
-        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // Convert tabs to 4 spaces
-        .replace(/\n/g, '<br>'); // Convert newlines to <br>
+    // Fallback for old format (shouldn't be needed but just in case)
+    const escaped = escapeHtml(String(content))
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+        .replace(/\n/g, '<br>');
+    return escaped;
 }
 
 function displayResults(data, codeType, showAll = false) {
@@ -82,6 +119,27 @@ function displayResults(data, codeType, showAll = false) {
     }
 }
 
+function searchInContent(content, searchText) {
+    // Helper function to search within nested content structure
+    if (typeof content === 'object' && content.paragraphs) {
+        for (const paragraph of content.paragraphs) {
+            if (paragraph.content.toLowerCase().includes(searchText)) {
+                return true;
+            }
+            if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+                for (const subsection of paragraph.subsections) {
+                    if (subsection.content.toLowerCase().includes(searchText)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    // Fallback for old format
+    return String(content).toLowerCase().includes(searchText);
+}
+
 async function advancedFilter() {
     const codeType = document.getElementById('codeType').value;
     const filterId = document.getElementById('filterId').value;
@@ -96,7 +154,7 @@ async function advancedFilter() {
         const filteredItems = items.filter(item => {
             return (!filterId || item.id == filterId) &&
                    (!filterTitle || item.title.toLowerCase().includes(filterTitle)) &&
-                   (!filterContent || item.content.toLowerCase().includes(filterContent));
+                   (!filterContent || searchInContent(item.content, filterContent));
         });
         
         displayAdvancedResults(filteredItems, codeType);
