@@ -118,6 +118,57 @@ https://[your-domain]/api/handler.html
 - `civil_procedure_code` - Civil Procedure Code
 - `criminal_code` - Criminal Code
 
+## Data Structure
+
+### Basic Format
+
+Most law data items have a simple structure with three fields:
+
+```json
+{
+  "id": 1,
+  "title": "การฟ้องคดี",
+  "content": "ผู้ใดจะฟ้องคดีแพ่งต่อศาลได้..."
+}
+```
+
+### Structured Content Format
+
+Some law items contain structured content with paragraphs and subsections. For these items, an additional `sections` field is provided to make the content easier to parse programmatically:
+
+```json
+{
+  "id": 3,
+  "title": "มูลคดีเกิดขึ้นในเรือ หรือจำเลยไม่มีภูมิลำเนาอยู่ในราชอาณาจักร",
+  "content": "เพื่อประโยชน์ในการเสนอคำฟ้อง...",
+  "sections": {
+    "introduction": "เพื่อประโยชน์ในการเสนอคำฟ้อง",
+    "paragraphs": [
+      {
+        "number": "1",
+        "content": "ในกรณีที่มูลคดีเกิดขึ้นในเรือไทย..."
+      },
+      {
+        "number": "2",
+        "content": "ในกรณีที่จำเลยไม่มีภูมิลำเนาอยู่ในราชอาณาจักร",
+        "subsections": [
+          {
+            "number": "ก",
+            "content": "ถ้าจำเลยเคยมีภูมิลำเนาอยู่..."
+          },
+          {
+            "number": "ข",
+            "content": "ถ้าจำเลยประกอบหรือเคยประกอบกิจการ..."
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Note:** The `content` field is always present for backward compatibility and contains the full text. The `sections` field is optional and provides a structured representation when available.
+
 ## Notes
 
 1. All text searches and filters are case-insensitive
