@@ -65,7 +65,7 @@ console.log('\n--- Test 2: Filter by ID ---');
     
     assert(response.status === 200, 'Status code is 200');
     assert(response.data.count === 1, 'Filtered to 1 result');
-    assert(response.data.data[0].id === 1012, 'Correct ID returned');
+    assert(response.data.data[0].id === 'มาตรา 1012', 'Correct ID returned');
 })();
 
 // Test 3: Search functionality

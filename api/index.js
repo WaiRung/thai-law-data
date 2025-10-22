@@ -64,7 +64,12 @@ module.exports = async (req, res) => {
 
         // Apply filters
         if (filter_id) {
-            items = items.filter(item => item.id == filter_id);
+            items = items.filter(item => {
+                // Support both full format "มาตรา 1012" and just the number "1012"
+                return item.id == filter_id || 
+                       item.id === `มาตรา ${filter_id}` ||
+                       String(item.id).includes(filter_id);
+            });
         }
         if (filter_title) {
             const titleLower = filter_title.toLowerCase();

@@ -1,7 +1,7 @@
 {
   "civil_and_commercial_code": [
     {
-      "id": 1012,
+      "id": "มาตรา 1012",
       "title": "สัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัท",
       "content": {
         "paragraphs": [
@@ -14,7 +14,7 @@
       }
     },
     {
-      "id": 1025,
+      "id": "มาตรา 1025",
       "title": "ห้างหุ้นส่วนสามัญ",
       "content": {
         "paragraphs": [
