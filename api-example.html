@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thai Law Data API - Usage Examples</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .example-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .result-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005a8c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thai Law Data API - Usage Examples</h1>
+    <p><a href="index.html">← Back to Main Page</a></p>
+
+    <!-- Example 1 -->
+    <div class="example-section">
+        <h2>Example 1: Get All Data</h2>
+        <p>Retrieve all items from the civil and commercial code.</p>
+        <div class="code-block">
+<pre>fetch('/api?code=civil_and_commercial_code')
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example1()">Run Example 1</button>
+        <div id="result1" class="result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Example 2 -->
+    <div class="example-section">
+        <h2>Example 2: Filter by ID</h2>
+        <p>Get a specific law item by its ID.</p>
+        <div class="code-block">
+<pre>fetch('/api?code=civil_and_commercial_code&filter_id=1012')
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example2()">Run Example 2</button>
+        <div id="result2" class="result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="example-section">
+        <h2>Example 3: Search</h2>
+        <p>Search for items containing specific text across all fields.</p>
+        <div class="code-block">
+<pre>const searchTerm = encodeURIComponent('ห้างหุ้นส่วน');
+fetch(`/api?code=civil_and_commercial_code&search=${searchTerm}`)
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example3()">Run Example 3</button>
+        <div id="result3" class="result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Example 4 -->
+    <div class="example-section">
+        <h2>Example 4: Sort Descending</h2>
+        <p>Get all items sorted by ID in descending order.</p>
+        <div class="code-block">
+<pre>fetch('/api?code=civil_and_commercial_code&sort=id&order=desc')
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example4()">Run Example 4</button>
+        <div id="result4" class="result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Example 5 -->
+    <div class="example-section">
+        <h2>Example 5: Pagination</h2>
+        <p>Get the first 5 items with pagination.</p>
+        <div class="code-block">
+<pre>fetch('/api?code=civil_and_commercial_code&limit=1&offset=0')
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example5()">Run Example 5</button>
+        <div id="result5" class="result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Example 6 -->
+    <div class="example-section">
+        <h2>Example 6: Complex Query</h2>
+        <p>Combine multiple parameters: filter by title, sort, and limit results.</p>
+        <div class="code-block">
+<pre>const title = encodeURIComponent('สัญญา');
+fetch(`/api?code=civil_and_commercial_code&filter_title=${title}&sort=id&order=asc&limit=5`)
+    .then(res => res.json())
+    .then(data => console.log(data));</pre>
+        </div>
+        <button onclick="example6()">Run Example 6</button>
+        <div id="result6" class="result-box" style="display:none;"></div>
+    </div>
+
+    <script>
+        async function example1() {
+            const resultDiv = document.getElementById('result1');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/api?code=civil_and_commercial_code');
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+
+        async function example2() {
+            const resultDiv = document.getElementById('result2');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/api?code=civil_and_commercial_code&filter_id=1012');
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+
+        async function example3() {
+            const resultDiv = document.getElementById('result3');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const searchTerm = encodeURIComponent('ห้างหุ้นส่วน');
+                const response = await fetch(`/api?code=civil_and_commercial_code&search=${searchTerm}`);
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+
+        async function example4() {
+            const resultDiv = document.getElementById('result4');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/api?code=civil_and_commercial_code&sort=id&order=desc');
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+
+        async function example5() {
+            const resultDiv = document.getElementById('result5');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/api?code=civil_and_commercial_code&limit=1&offset=0');
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+
+        async function example6() {
+            const resultDiv = document.getElementById('result6');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Loading...';
+            
+            try {
+                const title = encodeURIComponent('สัญญา');
+                const response = await fetch(`/api?code=civil_and_commercial_code&filter_title=${title}&sort=id&order=asc&limit=5`);
+                const data = await response.json();
+                resultDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color:red;">Error: ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>

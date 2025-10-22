@@ -108,7 +108,10 @@
                 };
                 
                 // Output as JSON
-                document.body.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+                const preElement = document.createElement('pre');
+                preElement.textContent = JSON.stringify(result, null, 2);
+                document.body.innerHTML = '';
+                document.body.appendChild(preElement);
                 document.contentType = 'application/json';
                 
             } catch (error) {
@@ -116,7 +119,10 @@
                     error: error.message,
                     code: params.get('code') || 'civil_and_commercial_code'
                 };
-                document.body.innerHTML = '<pre>' + JSON.stringify(errorResponse, null, 2) + '</pre>';
+                const preElement = document.createElement('pre');
+                preElement.textContent = JSON.stringify(errorResponse, null, 2);
+                document.body.innerHTML = '';
+                document.body.appendChild(preElement);
             }
         })();
     </script>
