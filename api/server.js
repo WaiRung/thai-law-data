@@ -62,10 +62,19 @@ const server = http.createServer((req, res) => {
         }
         
         // Build the full file path
-        const fullPath = path.join(__dirname, '..', filePath);
+        const rootDir = path.join(__dirname, '..');
+        const fullPath = path.join(rootDir, filePath);
+        
+        // Security: Prevent directory traversal attacks
+        const normalizedPath = path.normalize(fullPath);
+        if (!normalizedPath.startsWith(rootDir)) {
+            res.writeHead(403, { 'Content-Type': 'text/plain' });
+            res.end('403 - Forbidden');
+            return;
+        }
         
         // Read and serve the file
-        fs.readFile(fullPath, (err, data) => {
+        fs.readFile(normalizedPath, (err, data) => {
             if (err) {
                 if (err.code === 'ENOENT') {
                     res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -76,7 +85,7 @@ const server = http.createServer((req, res) => {
                 }
             } else {
                 // Determine content type
-                const ext = path.extname(fullPath);
+                const ext = path.extname(normalizedPath);
                 const contentType = mimeTypes[ext] || 'application/octet-stream';
                 
                 res.writeHead(200, { 'Content-Type': contentType });
