@@ -20,7 +20,12 @@ async function filterById() {
         
         // Filter by ID
         const items = data[codeType];
-        const filteredItem = items.find(item => item.id == id); // Use == for string/number comparison
+        // Support both full format "มาตรา 1012" and just the number "1012"
+        const filteredItem = items.find(item => 
+            item.id == id || 
+            item.id === `มาตรา ${id}` ||
+            String(item.id).includes(id)
+        );
         
         displayResults(filteredItem, codeType);
     } catch (error) {
@@ -152,7 +157,12 @@ async function advancedFilter() {
         const items = data[codeType];
         
         const filteredItems = items.filter(item => {
-            return (!filterId || item.id == filterId) &&
+            // Support both full format "มาตรา 1012" and just the number "1012"
+            const idMatch = !filterId || 
+                           item.id == filterId || 
+                           item.id === `มาตรา ${filterId}` ||
+                           String(item.id).includes(filterId);
+            return idMatch &&
                    (!filterTitle || item.title.toLowerCase().includes(filterTitle)) &&
                    (!filterContent || searchInContent(item.content, filterContent));
         });
