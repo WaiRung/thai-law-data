@@ -103,7 +103,7 @@
         <p>Retrieve all items from the civil and commercial code.</p>
         <div class="code-block">
 <pre>// Fetch JSON data directly
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const items = data.civil_and_commercial_code;
@@ -120,7 +120,7 @@ fetch('/api/civil_and_commercial_code.json')
         <p>Get a specific law item by its ID.</p>
         <div class="code-block">
 <pre>// Fetch JSON and filter by ID
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const items = data.civil_and_commercial_code.filter(item => 
@@ -140,7 +140,7 @@ fetch('/api/civil_and_commercial_code.json')
         <div class="code-block">
 <pre>// Fetch JSON and search
 const searchTerm = 'ห้างหุ้นส่วน';
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const items = data.civil_and_commercial_code.filter(item =>
@@ -160,7 +160,7 @@ fetch('/api/civil_and_commercial_code.json')
         <p>Get all items sorted by ID in descending order.</p>
         <div class="code-block">
 <pre>// Fetch JSON and sort descending
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const items = data.civil_and_commercial_code.sort((a, b) => 
@@ -179,7 +179,7 @@ fetch('/api/civil_and_commercial_code.json')
         <p>Get the first 5 items with pagination.</p>
         <div class="code-block">
 <pre>// Fetch JSON and paginate
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const allItems = data.civil_and_commercial_code;
@@ -199,7 +199,7 @@ fetch('/api/civil_and_commercial_code.json')
         <div class="code-block">
 <pre>// Fetch JSON, filter, sort and limit
 const title = 'สัญญา';
-fetch('/api/civil_and_commercial_code.json')
+fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         let items = data.civil_and_commercial_code.filter(item =>
@@ -243,7 +243,7 @@ fetch('/api/civil_and_commercial_code.json')
             
             try {
                 const codeType = 'civil_and_commercial_code';
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
@@ -270,7 +270,7 @@ fetch('/api/civil_and_commercial_code.json')
             try {
                 const codeType = 'civil_and_commercial_code';
                 const filterId = '1012';
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
@@ -304,7 +304,7 @@ fetch('/api/civil_and_commercial_code.json')
             try {
                 const codeType = 'civil_and_commercial_code';
                 const searchTerm = 'ห้างหุ้นส่วน';
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
@@ -339,7 +339,7 @@ fetch('/api/civil_and_commercial_code.json')
             
             try {
                 const codeType = 'civil_and_commercial_code';
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
@@ -379,7 +379,7 @@ fetch('/api/civil_and_commercial_code.json')
                 const codeType = 'civil_and_commercial_code';
                 const limit = 1;
                 const offset = 0;
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
@@ -412,7 +412,7 @@ fetch('/api/civil_and_commercial_code.json')
                 const codeType = 'civil_and_commercial_code';
                 const filterTitle = 'สัญญา';
                 const limit = 5;
-                const response = await fetch(`/api/${codeType}.json`);
+                const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
                 let items = data[codeType];
                 
