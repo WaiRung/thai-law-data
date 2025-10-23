@@ -26,9 +26,9 @@ For local development:
 http://localhost:3000/api
 ```
 
-For production (when deployed):
+For production (GitHub Pages):
 ```
-https://your-domain.com/api
+https://wairung.github.io/thai-law-data/api/handler.html
 ```
 
 ### Query Parameters
@@ -49,32 +49,32 @@ https://your-domain.com/api
 
 #### Get all data
 ```
-GET /api?code=civil_and_commercial_code
+GET /api/handler.html?code=civil_and_commercial_code
 ```
 
 #### Filter by ID
 ```
-GET /api?code=civil_and_commercial_code&filter_id=1012
+GET /api/handler.html?code=civil_and_commercial_code&filter_id=1012
 ```
 
 #### Search for a term
 ```
-GET /api?code=civil_and_commercial_code&search=สัญญา
+GET /api/handler.html?code=civil_and_commercial_code&search=สัญญา
 ```
 
 #### Sort by ID descending
 ```
-GET /api?code=civil_and_commercial_code&sort=id&order=desc
+GET /api/handler.html?code=civil_and_commercial_code&sort=id&order=desc
 ```
 
 #### Paginate results
 ```
-GET /api?code=civil_and_commercial_code&limit=10&offset=0
+GET /api/handler.html?code=civil_and_commercial_code&limit=10&offset=0
 ```
 
 #### Complex query
 ```
-GET /api?code=civil_and_commercial_code&filter_title=สัญญา&sort=id&order=asc&limit=5
+GET /api/handler.html?code=civil_and_commercial_code&filter_title=สัญญา&sort=id&order=asc&limit=5
 ```
 
 ### Response Format
