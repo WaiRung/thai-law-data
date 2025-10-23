@@ -1,9 +1,24 @@
 // Development server for testing the API locally
 const http = require('http');
 const url = require('url');
+const fs = require('fs');
+const path = require('path');
 const apiHandler = require('./index.js');
 
 const PORT = process.env.PORT || 3000;
+
+// MIME types for static files
+const mimeTypes = {
+    '.html': 'text/html',
+    '.css': 'text/css',
+    '.js': 'application/javascript',
+    '.json': 'application/json',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.gif': 'image/gif',
+    '.svg': 'image/svg+xml',
+    '.ico': 'image/x-icon'
+};
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
@@ -38,9 +53,36 @@ const server = http.createServer((req, res) => {
         
         apiHandler(mockReq, mockRes);
     } else {
-        // Serve static files or 404
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Not Found\n\nTry: http://localhost:' + PORT + '/api?code=civil_and_commercial_code');
+        // Serve static files
+        let filePath = parsedUrl.pathname;
+        
+        // Default to index.html
+        if (filePath === '/') {
+            filePath = '/index.html';
+        }
+        
+        // Build the full file path
+        const fullPath = path.join(__dirname, '..', filePath);
+        
+        // Read and serve the file
+        fs.readFile(fullPath, (err, data) => {
+            if (err) {
+                if (err.code === 'ENOENT') {
+                    res.writeHead(404, { 'Content-Type': 'text/plain' });
+                    res.end('404 - File Not Found');
+                } else {
+                    res.writeHead(500, { 'Content-Type': 'text/plain' });
+                    res.end('500 - Internal Server Error');
+                }
+            } else {
+                // Determine content type
+                const ext = path.extname(fullPath);
+                const contentType = mimeTypes[ext] || 'application/octet-stream';
+                
+                res.writeHead(200, { 'Content-Type': contentType });
+                res.end(data);
+            }
+        });
     }
 });
 
