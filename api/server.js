@@ -97,10 +97,12 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
     console.log(`Thai Law Data API server running at http://localhost:${PORT}/`);
-    console.log(`\nExample requests:`);
+    console.log(`\nExample requests (local development):`);
     console.log(`  http://localhost:${PORT}/api?code=civil_and_commercial_code`);
     console.log(`  http://localhost:${PORT}/api?code=civil_and_commercial_code&search=สัญญา`);
     console.log(`  http://localhost:${PORT}/api?code=civil_and_commercial_code&filter_id=1012`);
     console.log(`  http://localhost:${PORT}/api?code=civil_and_commercial_code&sort=id&order=desc`);
     console.log(`  http://localhost:${PORT}/api?code=civil_and_commercial_code&limit=1&offset=0`);
+    console.log(`\nFor GitHub Pages production, use:`);
+    console.log(`  https://wairung.github.io/thai-law-data/api/handler.html?code=civil_and_commercial_code&filter_id=1012`);
 });
