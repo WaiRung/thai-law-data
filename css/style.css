@@ -30,10 +30,6 @@ h1 {
     font-weight: 700;
     color: #1a202c;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 h2 {
@@ -70,6 +66,7 @@ p {
 .filter-section h2 {
     margin-top: 0;
     border-bottom: none;
+    color: #1a202c;
 }
 
 /* Form Elements */
@@ -229,7 +226,7 @@ button:disabled {
 
 .api-info h3 {
     margin-top: 20px;
-    color: #2d3748;
+    color: #1a202c;
 }
 
 .api-info code {
@@ -252,26 +249,26 @@ button:disabled {
     margin: 12px 0;
     padding-left: 25px;
     position: relative;
-    color: #2d3748;
+    color: #1a202c;
 }
 
 .api-info li::before {
     content: "→";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #2d3748;
     font-weight: bold;
 }
 
 .api-info a {
-    color: #4c51bf;
-    text-decoration: none;
+    color: #1a202c;
+    text-decoration: underline;
     font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .api-info a:hover {
-    color: #2d3748;
+    color: #000000;
     text-decoration: underline;
 }
 
