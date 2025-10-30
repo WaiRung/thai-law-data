@@ -53,33 +53,28 @@
     </div>
 
     <!-- API Information -->
-    <h2>API Access:</h2>
-    <p>This project now supports a full REST API with filtering, searching, and sorting via URL parameters!</p>
+    <h2>Data Access:</h2>
+    <p>Access Thai law data via direct JSON files. All filtering, searching, and sorting can be done client-side!</p>
     <div class="api-info">
-        <h3>API Endpoint</h3>
-        <code>/api/handler.html?code=civil_and_commercial_code</code>
-        
-        <h3>Supported Parameters:</h3>
+        <h3>Simple and Direct</h3>
+        <p>No complex API endpoints - just fetch the JSON files and filter/sort as needed:</p>
         <ul>
-            <li><strong>code</strong>: civil_and_commercial_code, civil_procedure_code, criminal_code</li>
-            <li><strong>filter_id</strong>: Filter by exact ID (e.g., filter_id=1012)</li>
-            <li><strong>filter_title</strong>: Filter by title text (e.g., filter_title=สัญญา)</li>
-            <li><strong>filter_content</strong>: Filter by content text</li>
-            <li><strong>search</strong>: Search across all fields</li>
-            <li><strong>sort</strong>: Sort by field (id, title, content)</li>
-            <li><strong>order</strong>: Sort order (asc, desc)</li>
-            <li><strong>limit</strong>: Max results to return</li>
-            <li><strong>offset</strong>: Pagination offset</li>
+            <li>✅ Fetch raw JSON data</li>
+            <li>✅ Filter, search, sort client-side</li>
+            <li>✅ CORS enabled for cross-origin requests</li>
+            <li>✅ No server required - pure static files</li>
         </ul>
         
-        <h3>Example API Calls:</h3>
-        <ul>
-            <li><code>/api/handler.html?code=civil_and_commercial_code&filter_id=1012</code></li>
-            <li><code>/api/handler.html?code=civil_and_commercial_code&search=สัญญา&sort=id&order=desc</code></li>
-            <li><code>/api/handler.html?code=civil_and_commercial_code&limit=5&offset=0</code></li>
-        </ul>
+        <h3>Example Usage:</h3>
+        <pre><code>fetch('api/civil_and_commercial_code.json')
+  .then(res => res.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    // Filter, sort, or search as needed
+    console.log(items);
+  });</code></pre>
         
-        <p><a href="API_DOCUMENTATION.md">📖 View Full API Documentation</a> | <a href="README.md">📚 View README</a> | <a href="api-example.html">💻 Try Live Examples</a></p>
+        <p><a href="API_DOCUMENTATION.md">📖 View Documentation</a> | <a href="README.md">📚 View README</a> | <a href="api-example.html">💻 Try Live Examples</a></p>
     </div>
 
     <!-- Direct Links -->
