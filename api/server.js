@@ -34,7 +34,11 @@ const server = http.createServer((req, res) => {
         
         const mockRes = {
             statusCode: 200,
-            headers: {},
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type'
+            },
             setHeader: function(key, value) {
                 this.headers[key] = value;
             },
