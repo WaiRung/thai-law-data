@@ -5,6 +5,14 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async (req, res) => {
+    // Handle OPTIONS preflight request
+    if (req.method === 'OPTIONS') {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        res.status(200).end();
+        return;
+    }
     try {
         // Parse query parameters
         const { 
