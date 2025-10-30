@@ -125,7 +125,9 @@ npm test
 
 ## Deployment
 
-This project supports deployment to multiple platforms with CORS enabled:
+This project supports deployment to multiple platforms with CORS enabled. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+**Quick Start:**
 
 ### GitHub Pages (Recommended)
 
@@ -198,8 +200,11 @@ If you encounter CORS errors:
 
 ```
 thai-law-data/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                 # GitHub Actions deployment
 ├── api/
-│   ├── server.js                     # Development server
+│   ├── server.js                      # Development server with CORS
 │   ├── civil_and_commercial_code.json
 │   ├── civil_procedure_code.json
 │   └── criminal_code.json
@@ -208,10 +213,16 @@ thai-law-data/
 ├── js/
 │   └── script.js
 ├── test/
-│   └── json-validation.test.js       # JSON validation tests
+│   ├── json-validation.test.js        # JSON validation tests
+│   └── client-side-usage.test.js      # Client-side usage tests
+├── .nojekyll                          # Disable Jekyll processing
+├── _headers                           # Netlify headers configuration
+├── netlify.toml                       # Netlify configuration
+├── vercel.json                        # Vercel configuration with CORS
 ├── index.html                         # Web interface
 ├── api-example.html                   # Usage examples
 ├── package.json
+├── DEPLOYMENT.md                      # Deployment guide
 └── README.md                          # This file
 ```
 
