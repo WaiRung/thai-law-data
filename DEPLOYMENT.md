@@ -175,7 +175,7 @@ If you see CORS errors on GitHub Pages:
 
 2. **Verify URL**
    - Make sure you're using the correct GitHub Pages URL
-   - Check that the file exists: `https://username.github.io/repo/api/file.json`
+   - Check that the file exists: `https://yourusername.github.io/repository-name/api/file.json`
 
 3. **Clear cache**
    - GitHub Pages may cache old responses
