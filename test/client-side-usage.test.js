@@ -25,9 +25,9 @@ try {
     const data = JSON.parse(fileContent);
     const items = data.civil_and_commercial_code;
     
-    // Filter by ID (client-side)
+    // Filter by ID (client-side) - exact match
     const filtered = items.filter(item => 
-        item.id === 'มาตรา 1012' || item.id.includes('1012')
+        item.id === 'มาตรา 1012'
     );
     
     assert(filtered.length > 0, 'Found items when filtering by ID');
@@ -123,12 +123,12 @@ try {
     function searchInContent(content, searchText) {
         if (typeof content === 'object' && content.paragraphs) {
             for (const paragraph of content.paragraphs) {
-                if (paragraph.content.toLowerCase().includes(searchText)) {
+                if (paragraph.content && paragraph.content.toLowerCase().includes(searchText)) {
                     return true;
                 }
                 if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
                     for (const subsection of paragraph.subsections) {
-                        if (subsection.content.toLowerCase().includes(searchText)) {
+                        if (subsection.content && subsection.content.toLowerCase().includes(searchText)) {
                             return true;
                         }
                     }
@@ -172,15 +172,13 @@ jsonFiles.forEach(codeType => {
 });
 
 // Summary
-setTimeout(() => {
-    console.log('\n=================================');
-    console.log('Client-Side Usage Test Summary:');
-    console.log(`Passed: ${testsPassed}`);
-    console.log(`Failed: ${testsFailed}`);
-    console.log(`Total: ${testsPassed + testsFailed}`);
-    console.log('=================================\n');
-    
-    if (testsFailed > 0) {
-        process.exit(1);
-    }
-}, 100);
+console.log('\n=================================');
+console.log('Client-Side Usage Test Summary:');
+console.log(`Passed: ${testsPassed}`);
+console.log(`Failed: ${testsFailed}`);
+console.log(`Total: ${testsPassed + testsFailed}`);
+console.log('=================================\n');
+
+if (testsFailed > 0) {
+    process.exit(1);
+}
