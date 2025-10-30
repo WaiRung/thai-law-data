@@ -125,9 +125,23 @@ npm test
 
 ## Deployment
 
+This project supports deployment to multiple platforms with CORS enabled:
+
+### GitHub Pages (Recommended)
+
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+**Setup:**
+1. Go to your repository Settings > Pages
+2. Under "Build and deployment", select "Source: GitHub Actions"
+3. Push your changes to the `main` branch
+4. The site will be automatically deployed to `https://yourusername.github.io/repository-name/`
+
+**CORS Support:** GitHub Pages automatically serves all public assets with `Access-Control-Allow-Origin: *`, enabling cross-origin requests from any domain.
+
 ### Vercel
 
-This project can be deployed on Vercel as a static site:
+This project can be deployed on Vercel as a static site with custom CORS headers:
 
 1. Install Vercel CLI
 ```bash
@@ -139,9 +153,46 @@ npm i -g vercel
 vercel
 ```
 
-### GitHub Pages
+The `vercel.json` configuration file includes CORS headers for all JSON files in the `/api/` directory.
 
-All files are static and can be hosted on GitHub Pages or any static hosting service.
+### Netlify
+
+Deploy to Netlify with custom CORS headers:
+
+1. Connect your repository to Netlify
+2. The `netlify.toml` configuration file will automatically apply CORS headers to JSON files
+
+### Other Static Hosts
+
+All files are static HTML, CSS, JavaScript, and JSON. You can host them on any static hosting service.
+
+## CORS Support
+
+### Built-in CORS
+
+All supported deployment platforms (GitHub Pages, Vercel, Netlify) serve the JSON files with CORS headers:
+
+- **GitHub Pages**: Automatically adds `Access-Control-Allow-Origin: *` to all public files
+- **Vercel**: Uses `vercel.json` configuration to add CORS headers
+- **Netlify**: Uses `netlify.toml` configuration to add CORS headers
+
+This allows you to fetch the JSON data from any origin:
+
+```javascript
+// This works from any domain
+fetch('https://wairung.github.io/thai-law-data/api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+
+### Troubleshooting CORS
+
+If you encounter CORS errors:
+
+1. **Check deployment method**: Ensure your site is deployed using GitHub Actions (for GitHub Pages) or proper deployment methods for other platforms
+2. **Verify URL**: Make sure you're accessing the correct production URL
+3. **Local development**: Use `npm run dev` which includes CORS headers in the development server
+4. **Mixed content**: Ensure you're not mixing HTTP and HTTPS requests
 
 ## Project Structure
 
