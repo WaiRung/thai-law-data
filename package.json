@@ -1,17 +1,17 @@
 {
   "name": "thai-law-data",
   "version": "1.0.0",
-  "description": "Thai Law Data API with filtering, searching, and sorting capabilities",
-  "main": "api/index.js",
+  "description": "Thai Law Data - Direct JSON access to Thai law codes",
+  "main": "api/server.js",
   "scripts": {
-    "test": "node test/api.test.js",
+    "test": "node test/json-validation.test.js",
     "dev": "node api/server.js"
   },
   "keywords": [
     "thai",
     "law",
-    "api",
-    "json"
+    "json",
+    "data"
   ],
   "author": "",
   "license": "MIT",

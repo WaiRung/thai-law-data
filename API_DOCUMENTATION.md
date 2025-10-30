@@ -1,145 +1,196 @@
-# Thai Law Data API Documentation
+# Thai Law Data - Direct JSON Access
 
-This API provides access to Thai law data with support for filtering, searching, and sorting via URL parameters.
+This repository provides Thai law data as simple JSON files for direct access.
 
-## Base URL
+## Available JSON Files
 
-```
-https://[your-domain]/api/handler.html
-```
+Access the raw JSON files directly via HTTP:
 
-## Endpoints
+- `/api/civil_and_commercial_code.json` - Civil and Commercial Code (ประมวลกฎหมายแพ่งและพาณิชย์)
+- `/api/civil_procedure_code.json` - Civil Procedure Code (ประมวลกฎหมายวิธีพิจารณาความแพ่ง)
+- `/api/criminal_code.json` - Criminal Code (ประมวลกฎหมายอาญา)
 
-### Get Law Data
+## Data Format
 
-**URL:** `/api/handler.html`
-
-**Method:** `GET`
-
-**Description:** Retrieve Thai law data with optional filtering, searching, and sorting.
-
-## Query Parameters
-
-| Parameter | Type | Description | Example |
-|-----------|------|-------------|---------|
-| `code` | string | The type of law code to query. Options: `civil_and_commercial_code`, `civil_procedure_code`, `criminal_code` | `code=civil_and_commercial_code` |
-| `filter_id` | number | Filter results by exact ID match | `filter_id=1012` |
-| `filter_title` | string | Filter results by title (case-insensitive partial match) | `filter_title=สัญญา` |
-| `filter_content` | string | Filter results by content (case-insensitive partial match) | `filter_content=ห้างหุ้นส่วน` |
-| `search` | string | Search across all fields (id, title, content) | `search=บริษัท` |
-| `sort` | string | Field to sort by. Options: `id`, `title`, `content` | `sort=id` |
-| `order` | string | Sort order. Options: `asc`, `desc` | `order=desc` |
-| `limit` | number | Maximum number of results to return | `limit=10` |
-| `offset` | number | Number of results to skip (for pagination) | `offset=0` |
-
-## Response Format
-
-### Success Response
+Each JSON file contains an object with a key matching the law code type, containing an array of law items:
 
 ```json
 {
-  "code": "civil_and_commercial_code",
-  "total": 100,
-  "offset": 0,
-  "limit": 10,
-  "count": 10,
-  "data": [
+  "civil_and_commercial_code": [
     {
-      "id": 1012,
+      "id": "มาตรา 1012",
       "title": "สัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัท",
-      "content": "อันว่าสัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัทนั้น..."
+      "content": {
+        "paragraphs": [
+          {
+            "id": 1,
+            "content": "อันว่าสัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัทนั้น คือสัญญาซึ่งบุคคลตั้งแต่สองคนขึ้นไปตกลงเข้ากันเพื่อกระทำกิจการร่วมกัน ด้วยประสงค์จะแบ่งปันกำไรอันจะพึงได้แต่กิจการที่ทำนั้น",
+            "subsections": null
+          }
+        ]
+      }
     }
   ]
 }
 ```
 
-**Response Fields:**
-- `code`: The law code type that was queried
-- `total`: Total number of results matching the filters (before pagination)
-- `offset`: The offset value used
-- `limit`: The limit value used (null if no limit)
-- `count`: Number of results returned in this response
-- `data`: Array of law data objects
-
-### Error Response
-
-```json
-{
-  "error": "Invalid code type: invalid_code",
-  "code": "invalid_code"
-}
-```
-
 ## Usage Examples
 
-### Example 1: Get all items from civil and commercial code
-```
-/api/handler.html?code=civil_and_commercial_code
+### Example 1: Fetch all data
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    console.log(`Total items: ${items.length}`);
+    console.log(items);
+  });
 ```
 
 ### Example 2: Filter by ID
-```
-/api/handler.html?code=civil_and_commercial_code&filter_id=1012
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const filtered = items.filter(item => 
+      item.id === 'มาตรา 1012' || item.id.includes('1012')
+    );
+    console.log(filtered);
+  });
 ```
 
-### Example 3: Search for a term
-```
-/api/handler.html?code=civil_and_commercial_code&search=บริษัท
+### Example 3: Search in title
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const searchTerm = 'สัญญา';
+    const results = items.filter(item => 
+      item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    console.log(results);
+  });
 ```
 
-### Example 4: Filter by title containing text
-```
-/api/handler.html?code=civil_and_commercial_code&filter_title=สัญญา
+### Example 4: Search in content (nested structure)
+
+```javascript
+function searchInContent(content, searchText) {
+  if (typeof content === 'object' && content.paragraphs) {
+    for (const paragraph of content.paragraphs) {
+      if (paragraph.content.toLowerCase().includes(searchText)) {
+        return true;
+      }
+      if (paragraph.subsections && Array.isArray(paragraph.subsections)) {
+        for (const subsection of paragraph.subsections) {
+          if (subsection.content.toLowerCase().includes(searchText)) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+  return String(content).toLowerCase().includes(searchText);
+}
+
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const searchTerm = 'ห้างหุ้นส่วน';
+    const results = items.filter(item => 
+      searchInContent(item.content, searchTerm.toLowerCase())
+    );
+    console.log(results);
+  });
 ```
 
-### Example 5: Sort by ID in descending order
-```
-/api/handler.html?code=civil_and_commercial_code&sort=id&order=desc
+### Example 5: Sort by ID
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    // Sort ascending
+    items.sort((a, b) => 
+      String(a.id).localeCompare(String(b.id))
+    );
+    console.log(items);
+  });
 ```
 
-### Example 6: Pagination - Get 10 items starting from offset 20
-```
-/api/handler.html?code=civil_and_commercial_code&limit=10&offset=20
+### Example 6: Pagination
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const limit = 10;
+    const offset = 0;
+    const page = items.slice(offset, offset + limit);
+    console.log({
+      total: items.length,
+      offset: offset,
+      limit: limit,
+      count: page.length,
+      data: page
+    });
+  });
 ```
 
-### Example 7: Complex query - Search, sort, and paginate
-```
-/api/handler.html?code=civil_and_commercial_code&search=ห้างหุ้นส่วน&sort=id&order=asc&limit=5&offset=0
+### Example 7: Complex query (filter + sort + paginate)
+
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(response => response.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const searchTerm = 'สัญญา';
+    
+    // Filter
+    let results = items.filter(item =>
+      item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    
+    // Sort
+    results.sort((a, b) => 
+      String(a.id).localeCompare(String(b.id))
+    );
+    
+    // Paginate
+    const limit = 5;
+    const offset = 0;
+    const page = results.slice(offset, offset + limit);
+    
+    console.log({
+      total: results.length,
+      offset: offset,
+      limit: limit,
+      count: page.length,
+      data: page
+    });
+  });
 ```
 
-### Example 8: Multiple filters
-```
-/api/handler.html?code=civil_and_commercial_code&filter_title=สัญญา&filter_content=ห้างหุ้นส่วน
-```
+## Live Examples
 
-## Available Law Codes
+For interactive examples, see [api-example.html](api-example.html).
 
-- `civil_and_commercial_code` - Civil and Commercial Code
-- `civil_procedure_code` - Civil Procedure Code
-- `criminal_code` - Criminal Code
+## CORS Support
+
+All JSON files are served with CORS headers enabled, allowing cross-origin requests from any domain.
 
 ## Notes
 
-1. All text searches and filters are case-insensitive
-2. The `search` parameter searches across all fields (id, title, content)
-3. Multiple filters can be combined (they are applied with AND logic)
-4. If both `search` and specific filters are provided, all conditions must be met
-5. Default sort order is ascending by ID if not specified
-6. If no `limit` is specified, all matching results are returned
-
-## Direct JSON Access
-
-For direct access to raw JSON files without filtering:
-- `/api/civil_and_commercial_code.json`
-- `/api/civil_procedure_code.json`
-- `/api/criminal_code.json`
-
-## Rate Limiting
-
-As this is a static site, there are no server-side rate limits. However, please be considerate with your requests.
-
-## Error Codes
-
-- Invalid code type: Returned when the specified `code` parameter doesn't match any available law codes
-- HTTP 404: Returned when the requested JSON file doesn't exist
-- HTTP 500: Returned for unexpected server errors
+- All filtering, searching, sorting, and pagination should be done client-side
+- The JSON files are static and don't change during runtime
+- For case-insensitive searches, use `.toLowerCase()` on both search term and target text
+- The `content` field may have a nested structure with `paragraphs` and `subsections`

@@ -1,15 +1,13 @@
-# Thai Law Data API
+# Thai Law Data
 
-A simple API for accessing Thai law data with support for filtering, searching, and sorting via URL parameters.
+A simple repository for accessing Thai law data as JSON files.
 
 ## Features
 
-- ✅ **Filter** by ID, title, or content
-- ✅ **Search** across all fields
-- ✅ **Sort** by any field (ascending or descending)
-- ✅ **Paginate** results with limit and offset
+- ✅ **Direct JSON access** - no API complexity
 - ✅ **CORS enabled** for cross-origin requests
-- ✅ **Pure JavaScript** - no database required
+- ✅ **Pure static files** - no server required
+- ✅ **Client-side filtering** - filter, search, sort on your own
 
 ## Available Law Codes
 
@@ -17,90 +15,91 @@ A simple API for accessing Thai law data with support for filtering, searching, 
 - `civil_procedure_code` - Civil Procedure Code (ประมวลกฎหมายวิธีพิจารณาความแพ่ง)
 - `criminal_code` - Criminal Code (ประมวลกฎหมายอาญา)
 
-## API Usage
+## Direct JSON Access
 
-### Base URL
+Access the raw JSON files directly:
 
 For local development:
 ```
-http://localhost:3000/api
+http://localhost:3000/api/civil_and_commercial_code.json
+http://localhost:3000/api/civil_procedure_code.json
+http://localhost:3000/api/criminal_code.json
 ```
 
-For production (GitHub Pages):
+For production:
 ```
-https://wairung.github.io/thai-law-data/api/handler.html
-```
-
-### Query Parameters
-
-| Parameter | Type | Description | Example |
-|-----------|------|-------------|---------|
-| `code` | string | Law code type | `code=civil_and_commercial_code` |
-| `filter_id` | number | Filter by exact ID | `filter_id=1012` |
-| `filter_title` | string | Filter by title (partial match) | `filter_title=สัญญา` |
-| `filter_content` | string | Filter by content (partial match) | `filter_content=ห้างหุ้นส่วน` |
-| `search` | string | Search all fields | `search=บริษัท` |
-| `sort` | string | Field to sort by | `sort=id` |
-| `order` | string | Sort order (asc/desc) | `order=desc` |
-| `limit` | number | Max results to return | `limit=10` |
-| `offset` | number | Number of results to skip | `offset=0` |
-
-### Examples
-
-#### Get all data
-```
-GET /api/handler.html?code=civil_and_commercial_code
+https://wairung.github.io/thai-law-data/api/civil_and_commercial_code.json
+https://wairung.github.io/thai-law-data/api/civil_procedure_code.json
+https://wairung.github.io/thai-law-data/api/criminal_code.json
 ```
 
-#### Filter by ID
-```
-GET /api/handler.html?code=civil_and_commercial_code&filter_id=1012
-```
+## Data Format
 
-#### Search for a term
-```
-GET /api/handler.html?code=civil_and_commercial_code&search=สัญญา
-```
-
-#### Sort by ID descending
-```
-GET /api/handler.html?code=civil_and_commercial_code&sort=id&order=desc
-```
-
-#### Paginate results
-```
-GET /api/handler.html?code=civil_and_commercial_code&limit=10&offset=0
-```
-
-#### Complex query
-```
-GET /api/handler.html?code=civil_and_commercial_code&filter_title=สัญญา&sort=id&order=asc&limit=5
-```
-
-### Response Format
+Each JSON file contains an object with a key matching the law code type, containing an array of law items:
 
 ```json
 {
-  "code": "civil_and_commercial_code",
-  "total": 100,
-  "offset": 0,
-  "limit": 10,
-  "count": 10,
-  "data": [
+  "civil_and_commercial_code": [
     {
-      "id": 1012,
+      "id": "มาตรา 1012",
       "title": "สัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัท",
-      "content": "อันว่าสัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัทนั้น..."
+      "content": {
+        "paragraphs": [
+          {
+            "id": 1,
+            "content": "อันว่าสัญญาจัดตั้งห้างหุ้นส่วนหรือบริษัทนั้น...",
+            "subsections": null
+          }
+        ]
+      }
     }
   ]
 }
 ```
 
+## Usage Examples
+
+### Fetch all data
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(res => res.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    console.log(items);
+  });
+```
+
+### Filter by ID
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(res => res.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const filtered = items.filter(item => item.id === 'มาตรา 1012');
+    console.log(filtered);
+  });
+```
+
+### Search in title
+```javascript
+fetch('api/civil_and_commercial_code.json')
+  .then(res => res.json())
+  .then(data => {
+    const items = data.civil_and_commercial_code;
+    const results = items.filter(item => 
+      item.title && item.title.includes('สัญญา')
+    );
+    console.log(results);
+  });
+```
+
+See [api-example.html](api-example.html) for more interactive examples.
+
 ## Development
 
 ### Prerequisites
 
-- Node.js 14.x or higher
+- Node.js 14.x or higher (for development server only)
 
 ### Setup
 
@@ -110,17 +109,12 @@ git clone https://github.com/WaiRung/thai-law-data.git
 cd thai-law-data
 ```
 
-2. Install dependencies (if any)
-```bash
-npm install
-```
-
-3. Start the development server
+2. Start the development server (optional)
 ```bash
 npm run dev
 ```
 
-The API will be available at `http://localhost:3000/api`
+The server will be available at `http://localhost:3000/`
 
 ### Testing
 
@@ -133,7 +127,7 @@ npm test
 
 ### Vercel
 
-This project is ready to deploy on Vercel:
+This project can be deployed on Vercel as a static site:
 
 1. Install Vercel CLI
 ```bash
@@ -147,23 +141,14 @@ vercel
 
 ### GitHub Pages
 
-The static files (HTML/CSS/JS) can be hosted on GitHub Pages, but the API endpoints require a serverless platform like Vercel, Netlify, or AWS Lambda.
-
-## Direct JSON Access
-
-For direct access to raw JSON files without filtering:
-- `/api/civil_and_commercial_code.json`
-- `/api/civil_procedure_code.json`
-- `/api/criminal_code.json`
+All files are static and can be hosted on GitHub Pages or any static hosting service.
 
 ## Project Structure
 
 ```
 thai-law-data/
 ├── api/
-│   ├── index.js                      # API handler (serverless function)
 │   ├── server.js                     # Development server
-│   ├── handler.html                  # Client-side API handler
 │   ├── civil_and_commercial_code.json
 │   ├── civil_procedure_code.json
 │   └── criminal_code.json
@@ -172,10 +157,10 @@ thai-law-data/
 ├── js/
 │   └── script.js
 ├── test/
-│   └── api.test.js                   # API tests
+│   └── json-validation.test.js       # JSON validation tests
 ├── index.html                         # Web interface
+├── api-example.html                   # Usage examples
 ├── package.json
-├── API_DOCUMENTATION.md              # Detailed API docs
 └── README.md                          # This file
 ```
 
