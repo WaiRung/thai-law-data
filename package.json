@@ -1,7 +1,7 @@
 {
   "name": "thai-law-data",
   "version": "1.0.0",
-  "description": "Thai Law Data - Direct JSON access to Thai law codes",
+  "description": "Thai Law Data - Raw JSON files containing Thai law codes (no API endpoints)",
   "main": "api/server.js",
   "scripts": {
     "test": "node test/json-validation.test.js",
