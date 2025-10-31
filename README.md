@@ -15,7 +15,7 @@ A repository providing Thai law data as raw JSON files for direct access. This i
 - `civil_procedure_code` - Civil Procedure Code (ประมวลกฎหมายวิธีพิจารณาความแพ่ง)
 - `criminal_code` - Criminal Code (ประมวลกฎหมายอาญา)
 
-## Accessing the Data
+## How to Access the JSON Files
 
 Fetch the raw JSON files directly via HTTP:
 
