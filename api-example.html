@@ -6,6 +6,27 @@
     <title>Thai Law Data - Usage Examples</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .info-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .info-banner h3 {
+            margin-top: 0;
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        .info-banner ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .info-banner li {
+            margin: 8px 0;
+        }
         .example-section {
             margin: 30px 0;
             padding: 25px;
@@ -27,6 +48,15 @@
         .example-section p {
             color: #2d3748;
             margin-bottom: 15px;
+        }
+        .client-side-note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #92400e;
         }
         .code-block {
             background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
@@ -97,17 +127,35 @@
     <h1>Thai Law Data - Usage Examples</h1>
     <p><a href="index.html" class="back-link">← Back to Main Page</a></p>
 
+    <div class="info-banner">
+        <h3>🎯 How This Works - Client-Side Processing</h3>
+        <p><strong>Important:</strong> This repository serves <strong>raw JSON files</strong>, not API endpoints with query parameters.</p>
+        <ul>
+            <li>📥 You fetch the <strong>complete JSON file</strong> (all data)</li>
+            <li>💻 All filtering, searching, sorting, and pagination happen <strong>client-side</strong> (in your JavaScript)</li>
+            <li>🚀 No server-side processing - you control everything</li>
+            <li>✨ The examples below show how to process the data after fetching</li>
+        </ul>
+    </div>
+
     <!-- Example 1 -->
     <div class="example-section">
         <h2>Example 1: Get All Data</h2>
-        <p>Retrieve all items from the civil and commercial code.</p>
+        <p>Fetch the complete JSON file and access all items.</p>
+        <div class="client-side-note">
+            ⚠️ This fetches the <strong>entire dataset</strong> from the JSON file. The "total" count represents all items in the file.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON data directly
+<pre>// Fetch complete JSON data file
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const items = data.civil_and_commercial_code;
-        console.log({ code: 'civil_and_commercial_code', total: items.length, data: items });
+        console.log({ 
+            code: 'civil_and_commercial_code', 
+            total: items.length,  // Total items in the dataset
+            data: items 
+        });
     });</pre>
         </div>
         <button onclick="example1()">Run Example 1</button>
@@ -116,17 +164,27 @@ fetch('api/civil_and_commercial_code.json')
 
     <!-- Example 2 -->
     <div class="example-section">
-        <h2>Example 2: Filter by ID</h2>
-        <p>Get a specific law item by its ID.</p>
+        <h2>Example 2: Client-Side Filter by ID</h2>
+        <p>Fetch the complete dataset, then filter for a specific ID using JavaScript.</p>
+        <div class="client-side-note">
+            ⚠️ You must fetch the <strong>entire JSON file first</strong>, then use <code>.filter()</code> to find matching items. The "total" count shows how many items matched your filter.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON and filter by ID
+<pre>// Fetch complete JSON, then filter client-side
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
-        const items = data.civil_and_commercial_code.filter(item => 
+        const allItems = data.civil_and_commercial_code;
+        // Filter after fetching all data
+        const filtered = allItems.filter(item => 
             item.id == '1012' || item.id === 'มาตรา 1012'
         );
-        console.log({ code: 'civil_and_commercial_code', total: items.length, data: items });
+        console.log({ 
+            code: 'civil_and_commercial_code', 
+            total: filtered.length,  // Filtered count
+            totalInDataset: allItems.length,  // Original dataset size
+            data: filtered 
+        });
     });</pre>
         </div>
         <button onclick="example2()">Run Example 2</button>
@@ -135,19 +193,30 @@ fetch('api/civil_and_commercial_code.json')
 
     <!-- Example 3 -->
     <div class="example-section">
-        <h2>Example 3: Search</h2>
-        <p>Search for items containing specific text across all fields.</p>
+        <h2>Example 3: Client-Side Search</h2>
+        <p>Fetch all data, then search for items containing specific text across fields.</p>
+        <div class="client-side-note">
+            ⚠️ The entire JSON file is fetched first. Search is performed <strong>client-side</strong> by checking each item's properties.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON and search
+<pre>// Fetch complete JSON, then search client-side
 const searchTerm = 'ห้างหุ้นส่วน';
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
-        const items = data.civil_and_commercial_code.filter(item =>
+        const allItems = data.civil_and_commercial_code;
+        // Search after fetching all data
+        const results = allItems.filter(item =>
             item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
             JSON.stringify(item.content).toLowerCase().includes(searchTerm.toLowerCase())
         );
-        console.log({ code: 'civil_and_commercial_code', total: items.length, data: items });
+        console.log({ 
+            code: 'civil_and_commercial_code', 
+            searchTerm: searchTerm,
+            matchingItems: results.length,  // How many matched
+            totalInDataset: allItems.length,  // Total available
+            data: results 
+        });
     });</pre>
         </div>
         <button onclick="example3()">Run Example 3</button>
@@ -156,17 +225,27 @@ fetch('api/civil_and_commercial_code.json')
 
     <!-- Example 4 -->
     <div class="example-section">
-        <h2>Example 4: Sort Descending</h2>
-        <p>Get all items sorted by ID in descending order.</p>
+        <h2>Example 4: Client-Side Sort Descending</h2>
+        <p>Fetch all items, then sort them by ID in descending order using JavaScript.</p>
+        <div class="client-side-note">
+            ⚠️ Sorting happens <strong>after fetching</strong> the complete dataset. Use JavaScript's <code>.sort()</code> method.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON and sort descending
+<pre>// Fetch complete JSON, then sort client-side
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
-        const items = data.civil_and_commercial_code.sort((a, b) => 
+        const items = data.civil_and_commercial_code;
+        // Sort after fetching all data (descending)
+        items.sort((a, b) => 
             String(b.id).localeCompare(String(a.id))
         );
-        console.log({ code: 'civil_and_commercial_code', total: items.length, data: items });
+        console.log({ 
+            code: 'civil_and_commercial_code', 
+            total: items.length, 
+            sortedBy: 'id_desc',
+            data: items 
+        });
     });</pre>
         </div>
         <button onclick="example4()">Run Example 4</button>
@@ -175,17 +254,30 @@ fetch('api/civil_and_commercial_code.json')
 
     <!-- Example 5 -->
     <div class="example-section">
-        <h2>Example 5: Pagination</h2>
-        <p>Get the first 5 items with pagination.</p>
+        <h2>Example 5: Client-Side Pagination</h2>
+        <p>Fetch the complete dataset, then implement pagination using <code>.slice()</code>.</p>
+        <div class="client-side-note">
+            ⚠️ <strong>All data is fetched first</strong>. Pagination is done client-side using <code>.slice()</code>. The "total" shows the complete dataset size, while "count" shows items in the current page.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON and paginate
+<pre>// Fetch complete JSON, then paginate client-side
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
         const allItems = data.civil_and_commercial_code;
-        const items = allItems.slice(0, 1);  // limit=1, offset=0
-        console.log({ code: 'civil_and_commercial_code', total: allItems.length, 
-                      offset: 0, limit: 1, count: items.length, data: items });
+        // Paginate after fetching all data
+        const limit = 5;
+        const offset = 0;
+        const page = allItems.slice(offset, offset + limit);
+        
+        console.log({ 
+            code: 'civil_and_commercial_code', 
+            total: allItems.length,  // Total items in dataset
+            offset: offset, 
+            limit: limit, 
+            count: page.length,  // Items in current page
+            data: page 
+        });
     });</pre>
         </div>
         <button onclick="example5()">Run Example 5</button>
@@ -194,20 +286,39 @@ fetch('api/civil_and_commercial_code.json')
 
     <!-- Example 6 -->
     <div class="example-section">
-        <h2>Example 6: Complex Query</h2>
-        <p>Combine multiple parameters: filter by title, sort, and limit results.</p>
+        <h2>Example 6: Complex Client-Side Query</h2>
+        <p>Fetch all data once, then chain multiple operations: filter by title, sort, and limit results.</p>
+        <div class="client-side-note">
+            ⚠️ This demonstrates <strong>chaining multiple client-side operations</strong>. First fetch all data, then filter → sort → limit. The "matchingItems" shows the filtered count before limiting.
+        </div>
         <div class="code-block">
-<pre>// Fetch JSON, filter, sort and limit
+<pre>// Fetch complete JSON, then filter + sort + limit client-side
 const title = 'สัญญา';
 fetch('api/civil_and_commercial_code.json')
     .then(res => res.json())
     .then(data => {
-        let items = data.civil_and_commercial_code.filter(item =>
+        const allItems = data.civil_and_commercial_code;
+        
+        // Step 1: Filter by title
+        let filtered = allItems.filter(item =>
             item.title?.toLowerCase().includes(title.toLowerCase())
-        ).sort((a, b) => 
+        );
+        
+        // Step 2: Sort by ID ascending
+        filtered.sort((a, b) => 
             String(a.id).localeCompare(String(b.id))
-        ).slice(0, 5);
-        console.log({ code: 'civil_and_commercial_code', total: items.length, data: items });
+        );
+        
+        // Step 3: Limit results
+        const limited = filtered.slice(0, 5);
+        
+        console.log({ 
+            code: 'civil_and_commercial_code',
+            totalInDataset: allItems.length,  // Original size
+            matchingItems: filtered.length,  // After filtering
+            returnedItems: limited.length,  // After limiting
+            data: limited 
+        });
     });</pre>
         </div>
         <button onclick="example6()">Run Example 6</button>
@@ -245,13 +356,11 @@ fetch('api/civil_and_commercial_code.json')
                 const codeType = 'civil_and_commercial_code';
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const items = data[codeType];
                 
                 const result = {
                     code: codeType,
                     total: items.length,
-                    offset: 0,
-                    limit: null,
                     count: items.length,
                     data: items
                 };
@@ -272,10 +381,10 @@ fetch('api/civil_and_commercial_code.json')
                 const filterId = '1012';
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const allItems = data[codeType];
                 
-                // Filter by ID
-                items = items.filter(item => 
+                // Filter by ID (client-side)
+                const filtered = allItems.filter(item => 
                     item.id == filterId || 
                     item.id === `มาตรา ${filterId}` ||
                     String(item.id).includes(filterId)
@@ -283,11 +392,10 @@ fetch('api/civil_and_commercial_code.json')
                 
                 const result = {
                     code: codeType,
-                    total: items.length,
-                    offset: 0,
-                    limit: null,
-                    count: items.length,
-                    data: items
+                    filteredBy: `id=${filterId}`,
+                    matchingItems: filtered.length,
+                    totalInDataset: allItems.length,
+                    data: filtered
                 };
                 
                 resultDiv.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
@@ -306,11 +414,11 @@ fetch('api/civil_and_commercial_code.json')
                 const searchTerm = 'ห้างหุ้นส่วน';
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const allItems = data[codeType];
                 
-                // Apply search
+                // Apply search (client-side)
                 const searchLower = searchTerm.toLowerCase();
-                items = items.filter(item => {
+                const results = allItems.filter(item => {
                     const titleMatch = item.title && item.title.toLowerCase().includes(searchLower);
                     const contentMatch = item.content && searchInContent(item.content, searchLower);
                     const idMatch = item.id && item.id.toString().includes(searchLower);
@@ -319,11 +427,10 @@ fetch('api/civil_and_commercial_code.json')
                 
                 const result = {
                     code: codeType,
-                    total: items.length,
-                    offset: 0,
-                    limit: null,
-                    count: items.length,
-                    data: items
+                    searchTerm: searchTerm,
+                    matchingItems: results.length,
+                    totalInDataset: allItems.length,
+                    data: results
                 };
                 
                 resultDiv.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
@@ -341,26 +448,19 @@ fetch('api/civil_and_commercial_code.json')
                 const codeType = 'civil_and_commercial_code';
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const items = data[codeType];
                 
-                // Sort by ID descending
+                // Sort by ID descending (client-side)
                 items.sort((a, b) => {
-                    let aVal = a.id;
-                    let bVal = b.id;
-                    
-                    // Convert to string for comparison
-                    aVal = String(aVal).toLowerCase();
-                    bVal = String(bVal).toLowerCase();
-                    
+                    const aVal = String(a.id).toLowerCase();
+                    const bVal = String(b.id).toLowerCase();
                     return aVal > bVal ? -1 : aVal < bVal ? 1 : 0;
                 });
                 
                 const result = {
                     code: codeType,
+                    sortedBy: 'id_desc',
                     total: items.length,
-                    offset: 0,
-                    limit: null,
-                    count: items.length,
                     data: items
                 };
                 
@@ -377,24 +477,22 @@ fetch('api/civil_and_commercial_code.json')
             
             try {
                 const codeType = 'civil_and_commercial_code';
-                const limit = 1;
+                const limit = 5;
                 const offset = 0;
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const allItems = data[codeType];
                 
-                const total = items.length;
-                
-                // Apply pagination
-                items = items.slice(offset, offset + limit);
+                // Apply pagination (client-side)
+                const page = allItems.slice(offset, offset + limit);
                 
                 const result = {
                     code: codeType,
-                    total: total,
+                    total: allItems.length,
                     offset: offset,
                     limit: limit,
-                    count: items.length,
-                    data: items
+                    count: page.length,
+                    data: page
                 };
                 
                 resultDiv.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
@@ -414,38 +512,31 @@ fetch('api/civil_and_commercial_code.json')
                 const limit = 5;
                 const response = await fetch(`api/${codeType}.json`);
                 const data = await response.json();
-                let items = data[codeType];
+                const allItems = data[codeType];
                 
-                // Filter by title
+                // Filter by title (client-side)
                 const titleLower = filterTitle.toLowerCase();
-                items = items.filter(item => 
+                let filtered = allItems.filter(item => 
                     item.title && item.title.toLowerCase().includes(titleLower)
                 );
                 
-                // Sort by ID ascending
-                items.sort((a, b) => {
-                    let aVal = a.id;
-                    let bVal = b.id;
-                    
-                    // Convert to string for comparison
-                    aVal = String(aVal).toLowerCase();
-                    bVal = String(bVal).toLowerCase();
-                    
+                // Sort by ID ascending (client-side)
+                filtered.sort((a, b) => {
+                    const aVal = String(a.id).toLowerCase();
+                    const bVal = String(b.id).toLowerCase();
                     return aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
                 });
                 
-                const total = items.length;
-                
-                // Apply limit
-                items = items.slice(0, limit);
+                // Apply limit (client-side)
+                const limited = filtered.slice(0, limit);
                 
                 const result = {
                     code: codeType,
-                    total: total,
-                    offset: 0,
-                    limit: limit,
-                    count: items.length,
-                    data: items
+                    totalInDataset: allItems.length,
+                    matchingItems: filtered.length,
+                    returnedItems: limited.length,
+                    operations: ['filter:title=สัญญา', 'sort:id_asc', 'limit:5'],
+                    data: limited
                 };
                 
                 resultDiv.innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
