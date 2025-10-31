@@ -1,13 +1,13 @@
 # Thai Law Data
 
-A simple repository for accessing Thai law data as JSON files.
+A repository providing Thai law data as raw JSON files for direct access. This is not an API - it simply serves static JSON files that you can fetch and process client-side.
 
 ## Features
 
-- ✅ **Direct JSON access** - no API complexity
+- ✅ **Raw JSON files** - no API endpoints or query parameters
 - ✅ **CORS enabled** for cross-origin requests
 - ✅ **Pure static files** - no server required
-- ✅ **Client-side filtering** - filter, search, sort on your own
+- ✅ **Client-side processing** - fetch the data and filter/search/sort as needed
 
 ## Available Law Codes
 
@@ -15,9 +15,9 @@ A simple repository for accessing Thai law data as JSON files.
 - `civil_procedure_code` - Civil Procedure Code (ประมวลกฎหมายวิธีพิจารณาความแพ่ง)
 - `criminal_code` - Criminal Code (ประมวลกฎหมายอาญา)
 
-## Direct JSON Access
+## Accessing the Data
 
-Access the raw JSON files directly:
+Fetch the raw JSON files directly via HTTP:
 
 For local development:
 ```
