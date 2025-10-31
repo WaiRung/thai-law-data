@@ -85,6 +85,15 @@
         <li><a href="api/civil_procedure_code.json">civil_procedure_code.json</a></li>
     </ul>
 
+    <!-- Register Service Worker for CORS -->
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/thai-law-data/sw.js')
+        .then(reg => console.log('Service Worker registered for CORS support', reg))
+        .catch(err => console.error('Service Worker registration failed', err));
+    }
+    </script>
+
     <script src="js/script.js"></script>
 </body>
 </html>
