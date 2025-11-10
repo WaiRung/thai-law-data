@@ -137,6 +137,24 @@
             <li>✨ The examples below show how to process the data after fetching</li>
         </ul>
     </div>
+    
+    <div class="info-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+        <h3>⚙️ Dynamic Configuration</h3>
+        <p><strong>New:</strong> Available law codes are now defined in <code>config/categories.json</code></p>
+        <ul>
+            <li>🔧 Easily add or remove law codes by editing the config file</li>
+            <li>📋 The config maps category names to data IDs (JSON file names)</li>
+            <li>🔄 The web interface automatically loads available codes from the config</li>
+            <li>💡 Examples below use <code>civil_and_commercial_code</code> but any configured data ID works the same way</li>
+        </ul>
+        <p><strong>Example config:</strong></p>
+        <pre style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 4px; margin: 10px 0;">
+{
+  "civil_and_commercial": ["civil_and_commercial_code"],
+  "criminal": ["criminal_code"],
+  "civil_procedure": ["civil_procedure_code"]
+}</pre>
+    </div>
 
     <!-- Example 1 -->
     <div class="example-section">
