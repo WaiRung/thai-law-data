@@ -196,6 +196,44 @@ If you encounter CORS errors:
 3. **Local development**: Use `npm run dev` which includes CORS headers in the development server
 4. **Mixed content**: Ensure you're not mixing HTTP and HTTPS requests
 
+## Configuration
+
+### Categories Configuration
+
+The repository uses a configuration file to define which law codes are available. This allows for easy addition or removal of law codes without modifying the application code.
+
+**Config file location:** `config/categories.json`
+
+**Format:**
+```json
+{
+  "category_name": ["data_id_1", "data_id_2"],
+  "another_category": ["data_id_3"]
+}
+```
+
+**Example:**
+```json
+{
+  "civil_and_commercial": ["civil_and_commercial_code"],
+  "criminal": ["criminal_code"],
+  "civil_procedure": ["civil_procedure_code"]
+}
+```
+
+**How it works:**
+- Each category name (e.g., `"civil_and_commercial"`) maps to an array of data IDs
+- Data IDs correspond to JSON files in the `api/` directory (e.g., `civil_and_commercial_code.json`)
+- The web interface automatically loads available law codes from this configuration
+- To add a new law code:
+  1. Add the JSON data file to the `api/` directory
+  2. Add the data ID to the appropriate category in `config/categories.json`
+
+**Error Handling:**
+- If the config file is missing, the application will display an error message
+- If a referenced data file doesn't exist, it will be logged in the browser console
+- The configuration is validated during tests to ensure all referenced files exist
+
 ## Project Structure
 
 ```
@@ -208,12 +246,16 @@ thai-law-data/
 │   ├── civil_and_commercial_code.json
 │   ├── civil_procedure_code.json
 │   └── criminal_code.json
+├── config/
+│   └── categories.json                # Category to data-id mapping configuration
 ├── css/
 │   └── style.css
 ├── js/
-│   └── script.js
+│   ├── config-loader.js               # Config loading utilities
+│   └── script.js                      # Main application logic
 ├── test/
 │   ├── json-validation.test.js        # JSON validation tests
+│   ├── config-validation.test.js      # Config validation tests
 │   └── client-side-usage.test.js      # Client-side usage tests
 ├── .nojekyll                          # Disable Jekyll processing
 ├── _headers                           # Netlify headers configuration

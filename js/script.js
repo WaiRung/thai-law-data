@@ -4,6 +4,51 @@ let pageSize = 10;
 let totalPages = 1;
 let allItems = [];
 let currentCodeType = '';
+let availableDataIds = [];
+
+// Initialize available data IDs from config
+async function initializeDataIds() {
+    try {
+        availableDataIds = await getAllDataIds();
+        await populateCodeTypeDropdown();
+        await populateDirectLinks();
+    } catch (error) {
+        console.error('Failed to initialize data IDs:', error);
+        alert('Error loading categories configuration. Please refresh the page.');
+    }
+}
+
+// Populate code type dropdown with data IDs from config
+async function populateCodeTypeDropdown() {
+    const codeTypeSelect = document.getElementById('codeType');
+    if (!codeTypeSelect) return;
+    
+    codeTypeSelect.innerHTML = '';
+    
+    for (const dataId of availableDataIds) {
+        const option = document.createElement('option');
+        option.value = dataId;
+        option.textContent = getDataIdDisplayName(dataId);
+        codeTypeSelect.appendChild(option);
+    }
+}
+
+// Populate direct links section with data IDs from config
+async function populateDirectLinks() {
+    const directLinksUl = document.getElementById('directLinks');
+    if (!directLinksUl) return;
+    
+    directLinksUl.innerHTML = '';
+    
+    for (const dataId of availableDataIds) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `api/${dataId}.json`;
+        a.textContent = `${dataId}.json`;
+        li.appendChild(a);
+        directLinksUl.appendChild(li);
+    }
+}
 
 async function filterById() {
     const id = document.getElementById('filterId').value;
@@ -272,3 +317,9 @@ function changePageSize() {
     currentPage = 1;
     renderPaginatedResults();
 }
+
+// Initialize on page load
+if (typeof window !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', initializeDataIds);
+}
+

@@ -16,9 +16,7 @@
         <input type="text" id="filterTitle" placeholder="Title contains...">
         <input type="text" id="filterContent" placeholder="Content contains...">
         <select id="codeType">
-            <option value="civil_and_commercial_code">Civil and Commercial Code</option>
-            <option value="criminal_code">Criminal Code</option>
-            <option value="civil_procedure_code">Civil Procedure Code</option>
+            <!-- Options will be populated dynamically from config -->
         </select>
         <button onclick="advancedFilter()">Advanced Filter</button>
     </div>
@@ -79,10 +77,8 @@
 
     <!-- Direct Links -->
     <h2>Direct JSON File Access:</h2>
-    <ul>
-        <li><a href="api/civil_and_commercial_code.json">civil_and_commercial_code.json</a></li>
-        <li><a href="api/criminal_code.json">criminal_code.json</a></li>
-        <li><a href="api/civil_procedure_code.json">civil_procedure_code.json</a></li>
+    <ul id="directLinks">
+        <!-- Links will be populated dynamically from config -->
     </ul>
 
     <!-- Register Service Worker for CORS -->
@@ -94,6 +90,7 @@
     }
     </script>
 
+    <script src="js/config-loader.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

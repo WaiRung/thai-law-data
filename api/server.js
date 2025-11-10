@@ -22,6 +22,25 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
     
+    // Serve config endpoint
+    if (parsedUrl.pathname === '/config/categories.json') {
+        const configPath = path.join(__dirname, '..', 'config', 'categories.json');
+        
+        fs.readFile(configPath, (err, data) => {
+            if (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Failed to load categories config' }));
+            } else {
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+                res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(data);
+            }
+        });
+        return;
+    }
+    
     // Serve static files
     let filePath = parsedUrl.pathname;
     

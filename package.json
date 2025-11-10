@@ -4,7 +4,7 @@
   "description": "Thai Law Data - Raw JSON files containing Thai law codes (no API endpoints)",
   "main": "api/server.js",
   "scripts": {
-    "test": "node test/json-validation.test.js",
+    "test": "node test/json-validation.test.js && node test/config-validation.test.js",
     "dev": "node api/server.js"
   },
   "keywords": [

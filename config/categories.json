@@ -1,0 +1,5 @@
+{
+  "civil_and_commercial": ["civil_and_commercial_code"],
+  "criminal": ["criminal_code"],
+  "civil_procedure": ["civil_procedure_code"]
+}
