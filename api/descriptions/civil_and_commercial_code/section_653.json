@@ -2,13 +2,19 @@
     "id": "มาตรา 653",
     "descriptions": [
         {
-            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "content": "หากลงลายมือชื่อภายหลัง ต้องได้รับความยินยอมจากคู่สัญญา มิเช่นนั้นเป็นโมฆะ"
         },
         {
-            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+            "content": "จำนวนเงินในเอกสารแสดงทั้งตัวอักษรและตัวเลข ถ้าไม่ตรงกันและไม่อาจทราบเจตนาที่แท้จริงได้ จะถือตามจำนวนที่เป็นตัวอักษรเป็นสำคัญ ตาม ม.9 "
         },
         {
-            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        }
+            "content": "หลักฐานเป็นหนังสืออาจทำกันภายหลังได้"
+        },
+        {
+            "content": "พยานต้องลงลายมือชื่อเท่านั้น แต่ลงลายมือชื่อภายหลัง / ไม่พร้อมกันได้"
+        },
+        {
+            "content": "ผู้ให้กู้ ผู้เยาว์ เป็นพยานได้"
+        },
     ]
 }
