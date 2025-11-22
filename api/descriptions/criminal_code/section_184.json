@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 184",
-    "title": "ทำลายพยานหลักฐานในการกระทำความผิด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดเพื่อจะช่วยผู้อื่นมิให้ต้องรับโทษหรือให้รับโทษน้อยลง ทำให้เสียหาย ทำลาย ซ่อนเร้น เอาไปเสีย หรือทำให้สูญหายหรือไร้ประโยชน์ซึ่งพยานหลักฐานในการกระทำความผิด",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

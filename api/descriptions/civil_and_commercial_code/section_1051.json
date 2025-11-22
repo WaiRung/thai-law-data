@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 1051",
-    "title": "ผู้เป็นหุ้นส่วนซึ่งออกจากหุ้นส่วน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้เป็นหุ้นส่วนซึ่งออกจากหุ้นส่วนไปแล้วยังคงต้องรับผิดในหนี้ซึ่งห้างหุ้นส่วนได้ก่อให้เกิดขึ้นก่อนที่ตนได้ออกจากหุ้นส่วนไป",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

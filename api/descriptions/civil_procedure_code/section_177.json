@@ -1,33 +1,11 @@
 {
     "id": "มาตรา 177",
-    "title": "คำให้การ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "เมื่อได้ส่งหมายเรียกและคำฟ้องให้จำเลยแล้ว ให้จำเลยทำคำให้การเป็นหนังสือยื่นต่อศาลภายในสิบห้าวัน",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ให้จำเลยแสดงโดยชัดแจงในคำให้การว่า จำเลยยอมรับหรือปฏิเสธข้ออ้างของโจทก์ทั้งสิ้นหรือแต่บางส่วน รวมทั้งเหตุแห่งการนั้น",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "จำเลยจะฟ้องแย้งมาในคำให้การก็ได้ แต่ถ้าฟ้องแย้งนั้นเป็นเรื่องอื่นไม่เกี่ยวกับคำฟ้องเดิมแล้ว ให้ศาลสั่งให้จำเลยฟ้องเป็นคดีต่างหาก",
-                "subsections": null
-            },
-            {
-                "id": 4,
-                "content": "ให้ศาลตรวจดูคำให้การนั้นแล้วสั่งให้รับไว้ หรือให้คืนไปหรือสั่งไม่รับตามที่บัญญัติไว้ในมาตรา ๑๘",
-                "subsections": null
-            },
-            {
-                "id": 5,
-                "content": "บทบัญญัติแห่งมาตรานี้ ให้ใช้บังคับแก่บุคคลภายนอกที่ถูกเรียกเข้ามาเป็นผู้ร้องสอดตามมาตรา ๕๗ (๓) โดยอนุโลม",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

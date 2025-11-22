@@ -1,18 +1,11 @@
 {
     "id": "มาตรา 215",
-    "title": "มั่วสุมกันเพื่อก่อความวุ่นวายขึ้นในบ้านเมือง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดมั่วสุมกันตั้งแต่สิบคนขึ้นไป ใช้กำลังประทุษร้ายขู่เข็ญว่าจะใช้กำลังประทุษร้าย หรือกระทำการอย่างหนึ่งอย่างใดให้เกิดการวุ่นวายขึ้นในบ้านเมือง",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าผู้กระทำความผิดคนหนึ่งคนใดมีอาวุธ",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        }
+    ]
 }

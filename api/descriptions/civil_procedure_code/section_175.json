@@ -1,27 +1,17 @@
 {
     "id": "มาตรา 175",
-    "title": "การแก้ไขคำฟ้อง / คำให้การ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ก่อนจำเลยยื่นคำให้การ โจทก์อาจถอนคำฟ้องได้โดยยื่นคำบอกกล่าวเป็นหนังสือต่อศาล",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ภายหลังจำเลยยื่นคำให้การแล้ว โจทก์อาจยื่นคำขอโดยทำเป็นคำร้องต่อศาลชั้นต้น เพื่ออนุญาตให้โจทก์ถอนคำฟ้องได้ ศาลจะอนุญาตหรือไม่อนุญาตหรืออนุญาตภายในเงื่อนไขตามที่เห็นสมควรก็ได้ แต่",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "ห้ามไม่ให้ศาลให้อนุญาต โดยมิได้ฟังจำเลยหรือผู้ร้องสอด ถ้าหากมี"
-                    },
-                    {
-                        "id": 2,
-                        "content": "ในกรณีที่โจทก์ถอนคำฟ้อง เนื่องจากมีข้อตกลงหรือประนีประนอมยอมความกับจำเลย ให้ศาลอนุญาตไปตามคำขอนั้น"
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

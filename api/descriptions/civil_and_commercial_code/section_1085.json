@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1085",
-    "title": "แสดงให้บุคคลภายนอกทราบ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิดได้แสดงด้วยจดหมายหรือใบแจ้งความหรือด้วยวิธีอย่างอื่นให้บุคคลภายนอกทราบว่าตนได้ลงหุ้นไว้มากกว่าจำนวนซึ่งได้จดทะเบียนเพียงใด ท่านว่าผู้นั้นจะต้องรับผิดเท่าถึงจำนวนเพียงนั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

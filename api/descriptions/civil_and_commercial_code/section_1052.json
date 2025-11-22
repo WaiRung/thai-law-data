@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 1052",
-    "title": "บุคคลผู้เข้าเป็นหุ้นส่วน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "บุคคลผู้เข้าเป็นหุ้นส่วนในห้างหุ้นส่วนย่อมต้องรับผิดในหนี้ใด ๆ ซึ่งห้างหุ้นส่วนได้ก่อให้เกิดขึ้นก่อนที่ตนเข้ามาเป็นหุ้นส่วนด้วย",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

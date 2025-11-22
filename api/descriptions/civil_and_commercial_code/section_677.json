@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 677",
-    "title": "ข้อความยกเว้นหรือจำกัดความรับผิดของเจ้าสำนักโรงแรมเป็นโมฆะ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้ามีคำแจ้งความปิดไว้ในโรงแรม โฮเต็ล หรือสถานที่อื่นทำนองเช่นว่านี้ เป็นข้อความยกเว้นหรือจำกัดความรับผิดของเจ้าสำนักไซร้ ท่านว่าความนั้นเป็นโมฆะ เว้นแต่คนเดินทางหรือแขกอาศัยจะได้ตกลงด้วยชัดแจ้งในการยกเว้นหรือจำกัดความรับผิดดังว่านั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

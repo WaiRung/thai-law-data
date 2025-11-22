@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 642",
-    "title": "ค่าฤชาธรรมเนียมในการทำสัญญายืมใช้คงรูป",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ค่าฤชาธรรมเนียมในการทำสัญญาก็ดี ค่าส่งมอบและค่าส่งคืนทรัพย์สินซึ่งยืมก็ดี ย่อมตกแก่ผู้ยืมเป็นผู้เสีย",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

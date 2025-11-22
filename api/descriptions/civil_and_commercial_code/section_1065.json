@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 1065",
-    "title": "ถือสิทธิ์จากบุคคลภายนอก กรณีห้างหุ้นส่วนจดทะเบียน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้เป็นหุ้นส่วนอาจถือประโยชน์แก่บุคคลภายนอกในบรรดาสิทธิอันห้างหุ้นส่วนจดทะเบียนนั้นได้มา แม้ในกิจการซึ่งไม่ปรากฏชื่อของตน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

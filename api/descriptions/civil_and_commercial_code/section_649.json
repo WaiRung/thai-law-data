@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 649",
-    "title": "อายุความเพื่อค่าทดแทนการยืมใช้คงรูป",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ในข้อความรับผิดเพื่อเสียค่าทดแทนอันเกี่ยวกับการยืมใช้คงรูปนั้น ท่านห้ามมิให้ฟ้องเมื่อพ้นเวลาหกเดือนนับแต่วันสิ้นสัญญา",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        }
+    ]
 }

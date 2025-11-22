@@ -1,18 +1,17 @@
 {
     "id": "มาตรา 198 ตรี",
-    "title": "จำเลยบางคนขาดนัดยื่นคำให้การ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ในคดีที่จำเลยบางคนขาดนัดยื่นคำให้การ ให้ศาลมีคำพิพากษาหรือคำสั่งชี้ขาดคดีโดยขาดนัดยื่นคำให้การระหว่างโจทก์กับจำเลยที่ขาดนัดยื่นคำให้การนั้นไปก่อนและดำเนินการพิจารณาคดีระหว่างโจทก์กับจำเลยที่ยื่นคำให้การต่อไป แต่ถ้ามูลความแห่งคดีนั้นเป็นการชำระหนี้ซึ่งแบ่งแยกจากกันมิได้ ให้ศาลรอการพิพากษาหรือมีคำสั่งชี้ขาดคดีโดยขาดนัดยื่นคำให้การไว้ก่อน เมื่อศาลดำเนินการพิจารณาสำหรับจำเลยที่ยื่นคำให้การเสร็จสิ้นแล้ว ก็ให้ศาลมีคำพิพากษาหรือคำสั่งชี้ขาดคดีไปตามรูปคดีสำหรับจำเลยทุกคน",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ในกรณีที่จำเลยที่ขาดนัดยื่นคำให้การไม่มาศาลในวันสืบพยานของคู่ความอื่นมิให้ถือว่าจำเลยนั้นขาดนัดพิจารณา",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

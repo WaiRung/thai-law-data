@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 188",
-    "title": "ทำให้เสียหายหรือทำลายเอกสารของผู้อื่น",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดทำให้เสียหาย ทำลาย ซ่อนเร้น เอาไปเสีย หรือทำให้สูญหายหรือไร้ประโยชน์ ซึ่งพินัยกรรมหรือเอกสารใดของผู้อื่น ในประการที่น่าจะเกิดความเสียหายแก่ผู้อื่นหรือประชาชน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

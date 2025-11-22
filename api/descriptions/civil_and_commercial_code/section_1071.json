@@ -1,29 +1,14 @@
 {
     "id": "มาตรา 1071",
-    "title": "พิสูจน์ หนี้ซึ่งเกิดขึ้นหลังจากห้างหุ้นส่วนซึ่งจดทะเบียนผิดนัดชำระหนี้",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ในกรณีที่กล่าวไว้ในมาตรา ๑๐๗๐ นั้น ถ้าผู้เป็นหุ้นส่วนนำพิสูจน์ได้ว่า",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "สินทรัพย์ของห้างหุ้นส่วนยังมีพอที่จะชำระหนี้ได้ทั้งหมดหรือบางส่วน และ",
-                        "subsections": null
-                    },
-                    {
-                        "id": 2,
-                        "content": "การที่จะบังคับเอาแก่ห้างหุ้นส่วนนั้นไม่เป็นการยากฉะนี้ไซร้",
-                        "subsections": null
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "content": "ศาลจะบังคับให้เอาสินทรัพย์ของห้างหุ้นส่วนนั้นชำระหนี้ก่อนก็ได้ สุดแต่ศาลจะเห็นสมควร",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]
 }

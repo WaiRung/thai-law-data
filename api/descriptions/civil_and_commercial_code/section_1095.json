@@ -1,34 +1,17 @@
 {
     "id": "มาตรา 1095",
-    "title": "ฟ้องร้องผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ตราบใดห้างหุ้นส่วนจำกัดยังมิได้เลิกกัน ตราบนั้นเจ้าหนี้ของห้างย่อมไม่มีสิทธิจะฟ้องร้องผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิดได้",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "แต่เมื่อห้างหุ้นส่วนนั้นได้เลิกกันแล้ว เจ้าหนี้ของห้างมีสิทธิฟ้องร้องผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิดได้เพียงจำนวนดังนี้ คือ",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "จำนวนลงหุ้นของผู้เป็นหุ้นส่วนเท่าที่ยังค้างส่งแก่ห้างหุ้นส่วน",
-                        "subsections": null
-                    },
-                    {
-                        "id": 2,
-                        "content": "จำนวนลงหุ้นเท่าที่ผู้เป็นหุ้นส่วนได้ถอนไปจากสินทรัพย์ของห้างหุ้นส่วน",
-                        "subsections": null
-                    },
-                    {
-                        "id": 3,
-                        "content": "จำนวนเงินปันผลและดอกเบี้ยซึ่งผู้เป็นหุ้นส่วนได้รับไปแล้วโดยทุจริตและฝ่าฝืนต่อบทมาตรา ๑๐๘๔",
-                        "subsections": null
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

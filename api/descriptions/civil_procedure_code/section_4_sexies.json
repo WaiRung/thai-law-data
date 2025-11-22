@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 4 ฉ",
-    "title": "การร้องขอเกี่ยวกับทรัพย์สินที่อยู่ในราชอาณาจักร",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "คำร้องขอเกี่ยวกับทรัพย์สินที่อยู่ในราชอาณาจักรก็ดี คำร้องขอที่หากศาลมีคำสั่งตามคำร้องขอนั้นจะเป็นผลให้ต้องจัดการหรือเลิกจัดการทรัพย์สินที่อยู่ในราชอาณาจักรก็ดี\n                    ซึ่งมูลคดีมิได้เกิดขึ้นในราชอาณาจักรและผู้ร้องไม่มีภูมิลำเนาอยู่ในราชอาณาจักร ให้เสนอต่อศาลที่ทรัพย์สินดังกล่าวอยู่ในเขตศาล",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

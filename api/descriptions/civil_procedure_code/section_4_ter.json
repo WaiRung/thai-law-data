@@ -1,18 +1,11 @@
 {
     "id": "มาตรา 4 ตรี",
-    "title": "การยื่นคำฟ้อง กรณีจำเลยมีภูมิลำเนาอยู่นอกราชอาณาจักร",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "คำฟ้องอื่นนอกจากที่บัญญัติไว้ในมาตรา ๔ ทวิ ซึ่งจำเลยมิได้มีภูมิลำเนาอยู่ในราชอาณาจักรและมูลคดีมิได้เกิดขึ้นในราชอาณาจักร ถ้าโจทก์เป็นผู้มีสัญชาติไทยหรือมีภูมิลำเนาอยู่ในราชอาณาจักร ให้เสนอต่อศาลแพ่งหรือต่อศาลที่โจทก์มีภูมิลำเนาอยู่ในเขตศาล",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "คำฟ้องตามวรรคหนึ่ง ถ้าจำเลยมีทรัพย์สินที่อาจถูกบังคับคดีได้อยู่ในราชอาณาจักร ไม่ว่าจะเป็นการชั่วคราวหรือถาวร โจทก์จะเสนอคำฟ้องต่อศาลที่ทรัพย์สินนั้นอยู่ในเขตศาลก็ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 143",
-    "title": "คนกลางเรียกหรือรับสินบน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดเรียก รับหรือยอมจะรับทรัพย์สินหรือประโยชน์อื่นใดสำหรับตนเองหรือผู้อื่น เป็นการตอบแทนในการที่จะจูงใจหรือได้จูงใจเจ้าพนักงาน สมาชิกสภานิติบัญญัติแห่งรัฐ สมาชิกสภาจังหวัดหรือสมาชิกสภาเทศบาลโดยวิธีอันทุจริตหรือผิดกฎหมายหรือโดยอิทธิพลของตนให้กระทำการ หรือไม่กระทำการในหน้าที่อันเป็นคุณหรือเป็นโทษแก่บุคคลใด",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
 }

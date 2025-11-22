@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 148",
-    "title": "เจ้าพนักงานข่มขืนใจเพื่อทรัพย์สิน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดเป็นเจ้าพนักงาน ใช้อำนาจในตำแหน่งโดยมิชอบ ข่มขืนใจหรือจูงใจเพื่อให้บุคคลใดมอบให้หรือหามาให้ซึ่งทรัพย์สินหรือประโยชน์อื่นใดแก่ตนเองหรือผู้อื่น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
 }

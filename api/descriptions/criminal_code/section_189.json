@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 189",
-    "title": "ช่วยผู้กระทำความผิดหรือผู้ต้องหา",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดช่วยผู้อื่นซึ่งเป็นผู้กระทำความผิดหรือเป็นผู้ต้องหาว่ากระทำความผิด อันมิใช่ความผิดลหุโทษเพื่อไม่ให้ต้องโทษ โดยให้พำนักแก่ผู้นั้น โดยซ่อนเร้นหรือโดยช่วยผู้นั้นด้วยประการใดเพื่อไม่ให้ถูกจับกุม",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
 }

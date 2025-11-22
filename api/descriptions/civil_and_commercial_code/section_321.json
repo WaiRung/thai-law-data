@@ -1,23 +1,14 @@
 {
     "id": "มาตรา 321",
-    "title": "ชำระหนี้อย่างอื่นแทนการชำระหนี้ที่ได้ตกลงกัน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าเจ้าหนี้ยอมรับการชำระหนี้อย่างอื่นแทนการชำระหนี้ที่ได้ตกลงกันไว้ ท่านว่าหนี้นั้นก็เป็นอันระงับสิ้นไป",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าเพื่อที่จะทำให้พอแก่ใจเจ้าหนี้นั้น ลูกหนี้รับภาระเป็นหนี้อย่างใดอย่างหนึ่งขึ้นใหม่ต่อเจ้าหนี้ไซร้ เมื่อกรณีเป็นที่สงสัย ท่านมิให้สันนิษฐานว่าลูกหนี้ได้ก่อหนี้นั้นขึ้นแทนการชำระหนี้",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "ถ้าชำระหนี้ด้วยออก ด้วยโอน หรือด้วยสลักหลังตั๋วเงิน หรือประทวนสินค้า ท่านว่าหนี้นั้นจะระงับสิ้นไปต่อเมื่อตั๋วเงิน หรือประทวนสินค้านั้นได้ใช้เงินแล้ว",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        }
+    ]
 }

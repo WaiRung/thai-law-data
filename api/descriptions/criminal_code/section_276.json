@@ -1,28 +1,11 @@
 {
     "id": "มาตรา 276",
-    "title": "ข่มขืนกระทำชำเรา",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดข่มขืนกระทำชำเราผู้อื่นโดยขู่เข็ญด้วยประการใด ๆ โดยใช้กำลังประทุษร้าย โดยผู้อื่นนั้นอยู่ในภาวะที่ไม่สามารถขัดขืนได้ หรือโดยทำให้ผู้อื่นนั้นเข้าใจผิดว่าตนเป็นบุคคลอื่น",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าการกระทำความผิดตามวรรคหนึ่ง ได้กระทำโดยทำให้ผู้ถูกกระทำเข้าใจว่าผู้กระทำมีอาวุธปืนหรือวัตถุระเบิด",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "ถ้าการกระทำความผิดตามวรรคหนึ่ง ได้กระทำโดยร่วมกระทำความผิดด้วยกันตั้งแต่สามคนขึ้นไป",
-                "subsections": null
-            },
-            {
-                "id": 4,
-                "content": "ถ้าการกระทำความผิดตามวรรคหนึ่ง ได้กระทำโดยมีอาวุธปืนหรือวัตถุระเบิด หรือโดยใช้อาวุธ หรือโดยร่วมกระทำความผิดด้วยกันอันมีลักษณะเป็นการโทรมหญิงหรือกระทำกับชายในลักษณะเดียวกัน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
 }

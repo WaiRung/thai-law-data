@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 4 ทวิ",
-    "title": "หลักในการเสนอคำฟ้องเกี่ยวด้วยอสังหาริมทรัพย์",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "คำฟ้องเกี่ยวด้วยอสังหาริมทรัพย์ หรือสิทธิหรือประโยชน์อันเกี่ยวด้วยอสังหาริมทรัพย์ ให้เสนอต่อศาลที่อสังหาริมทรัพย์นั้นตั้งอยู่ในเขตศาล ไม่ว่าจำเลยจะมีภูมิลำเนาอยู่ในราชอาณาจักรหรือไม่\n                    หรือต่อศาลที่จำเลยมีภูมิลำเนาอยู่ในเขตศาล",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        }
+    ]
 }
