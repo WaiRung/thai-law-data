@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1081",
-    "title": "ห้ามมิให้เอาชื่อของผู้เป็นหุ้นส่วนจำพวกจำกัด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ห้ามมิให้เอาชื่อของผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิดมาเรียกขานระคนเป็นชื่อห้าง",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        }
+    ]
 }

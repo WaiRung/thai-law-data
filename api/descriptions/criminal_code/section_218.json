@@ -1,38 +1,11 @@
 {
     "id": "มาตรา 218",
-    "title": "วางเพลิงเผาทรัพย์ที่สำคัญ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดวางเพลิงเผาทรัพย์ดังต่อไปนี้",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "โรงเรือน เรือ หรือแพที่คนอยู่อาศัย"
-                    },
-                    {
-                        "id": 2,
-                        "content": "โรงเรือน เรือหรือแพอันเป็นที่เก็บหรือที่ทำสินค้า"
-                    },
-                    {
-                        "id": 3,
-                        "content": "โรงมหรสพหรือสถานที่ประชุม"
-                    },
-                    {
-                        "id": 4,
-                        "content": "โรงเรือนอันเป็นสาธารณสมบัติของแผ่นดิน เป็นสาธารณสถาน หรือเป็นที่สำหรับประกอบพิธีกรรมตามศาสนา"
-                    },
-                    {
-                        "id": 5,
-                        "content": "สถานีรถไฟ ท่าอากาศยานหรือที่จอดรถหรือเรือสาธารณะ"
-                    },
-                    {
-                        "id": 6,
-                        "content": "เรือกลไฟ หรือเรือยนต์ อันมีระวางตั้งแต่ห้าตันขึ้นไป อากาศยาน หรือรถไฟที่ใช้ในการขนส่งสาธารณะ"
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        }
+    ]
 }

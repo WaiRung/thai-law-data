@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 244",
-    "title": "ผู้ใดมีไว้เพื่อนำออกใช้ซึ่งเงินปลอมหรือเงินแปลง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดมีไว้เพื่อนำออกใช้ซึ่งสิ่งใด ๆ อันตนได้มาโดยรู้ว่าเป็นของปลอมตามมาตรา ๒๔๐ หรือของแปลงตามมาตรา ๒๔๑",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

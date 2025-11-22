@@ -1,23 +1,14 @@
 {
     "id": "มาตรา 659",
-    "title": "หน้าที่ของผู้รับฝากไม่มีบำเหน็จ มีบำเหน็จ หรือเป็นผู้มีวิชาชีพเฉพาะกิจการค้าขายหรืออาชีวะ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าการรับฝากทรัพย์เป็นการทำให้เปล่าไม่มีบำเหน็จไซร้ ท่านว่าผู้รับฝากจำต้องใช้ความระมัดระวังสงวนทรัพย์สินซึ่งฝากนั้นเหมือนเช่นเคยประพฤติในกิจการของตนเอง",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าการรับฝากทรัพย์นั้นมีบำเหน็จค่าฝาก ท่านว่าผู้รับฝากจำต้องใช้ความระมัดระวังและใช้ฝีมือเพื่อสงวนทรัพย์สินนั้นเหมือนเช่นวิญญูชนจะพึงประพฤติโดยพฤติการณ์ดังนั้น ทั้งนี้ ย่อมรวมทั้งการใช้ฝีมืออันพิเศษเฉพาะการในที่จะพึงใช้ฝีมือเช่นนั้นด้วย",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "ถ้าและผู้รับฝากเป็นผู้มีวิชาชีพเฉพาะกิจการค้าขาย หรืออาชีวะอย่างหนึ่งอย่างใด ก็จำต้องใช้ความระมัดระวังและใช้ฝีมือเท่าที่เป็นธรรมดาจะต้องใช้และสมควรจะต้องใช้ในกิจการค้าขายหรืออาชีวะอย่างนั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

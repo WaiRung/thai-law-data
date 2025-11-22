@@ -1,23 +1,11 @@
 {
     "id": "มาตรา 1084",
-    "title": "ห้ามมิให้แบ่งเงินปันผลหรือดอกเบี้ยให้แก่ผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ห้ามมิให้แบ่งเงินปันผลหรือดอกเบี้ยให้แก่ผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิด นอกจากผลกำไรซึ่งห้างหุ้นส่วนทำมาค้าได้",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าทุนของห้างหุ้นส่วนลดน้อยลงไปเพราะค้าขายขาดทุน ท่านห้ามมิให้แบ่งเงินปันผลหรือดอกเบี้ยให้แก่ผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิด จนกว่าทุนซึ่งขาดไปนั้นจะได้คืนมาเต็มจำนวนเดิม",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "แต่ถ้าผู้เป็นหุ้นส่วนจำพวกจำกัดความรับผิดคนใดได้รับเงินปันผลหรือดอกเบี้ยไปแล้วโดยสุจริต ท่านว่าหาอาจจะบังคับให้เขาคืนเงินนั้นได้ไม่",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

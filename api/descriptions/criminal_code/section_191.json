@@ -1,23 +1,14 @@
 {
     "id": "มาตรา 191",
-    "title": "ทำให้ผู้ที่ถูกคุมขังหลุดพ้นจากการคุมขัง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดกระทำด้วยประการใดให้ผู้ที่ถูกคุมขังตามอำนาจของศาล ของพนักงานอัยการ ของพนักงานสอบสวน หรือของเจ้าพนักงานผู้มีอำนาจสืบสวนคดีอาญา หลุดพ้นจากการคุมขังไป",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าผู้ที่หลุดพ้นจากการคุมขังไปนั้นเป็นบุคคลที่ต้องคำพิพากษาจากศาลหนึ่งศาลใดให้ลงโทษประหารชีวิต จำคุกตลอดชีวิต หรือจำคุกตั้งแต่สิบห้าปีขึ้นไป หรือมีจำนวนตั้งแต่สามคนขึ้นไป",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "ถ้าความผิดตามมาตรานี้ได้กระทำโดยใช้กำลังประทุษร้าย หรือโดยขู่เข็ญว่าจะใช้กำลังประทุษร้าย หรือโดยมีหรือใช้อาวุธปืนหรือวัตถุระเบิด ผู้กระทำต้องระวางโทษหนักกว่าโทษที่กฎหมายบัญญัติไว้ในสองวรรคก่อนกึ่งหนึ่ง",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

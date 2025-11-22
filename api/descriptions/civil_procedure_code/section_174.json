@@ -1,22 +1,11 @@
 {
     "id": "มาตรา 174",
-    "title": "โจทก์ทิ้งฟ้อง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ในกรณีต่อไปนี้ให้ถือว่าโจทก์ได้ทิ้งฟ้อง คือ",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "ภายหลังที่ได้เสนอคำฟ้องแล้ว โจทก์เพิกเฉยไม่ร้องขอต่อพนักงานเจ้าหน้าที่เพื่อให้ส่งหมายเรียกให้แก้คดีแก่จำเลย และไม่แจ้งให้ศาลทราบเหตุแห่งการเพิกเฉยเช่นว่านั้นภายในกำหนดเจ็ดวันนับแต่วันยื่นคำฟ้อง"
-                    },
-                    {
-                        "id": 2,
-                        "content": "โจทก์เพิกเฉยไม่ดำเนินคดีภายในเวลาตามที่ศาลเห็นสมควรกำหนดไว้เพื่อการนั้นโดยได้ส่งคำสั่งให้แก่โจทก์โดยชอบแล้ว"
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        }
+    ]
 }

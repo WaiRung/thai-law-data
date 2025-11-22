@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 1113",
-    "title": "ผู้เริ่มก่อการบริษัทต้องรับผิดร่วมกันและโดยไม่จำกัด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้เริ่มก่อการบริษัทต้องรับผิดร่วมกันและโดยไม่จำกัด ในบรรดาหนี้และการจ่ายเงินซึ่งที่ประชุมตั้งบริษัทมิได้อนุมัติ และแม้จะได้มีอนุมัติก็ยังคงต้องรับผิดอยู่เช่นนั้นไปจนกว่าจะได้จดทะเบียนบริษัท",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

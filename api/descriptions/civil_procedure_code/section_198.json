@@ -1,23 +1,14 @@
 {
     "id": "มาตรา 198",
-    "title": "โจทก์ชนะคดีโดยขาดนัด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าจำเลยขาดนัดยื่นคำให้การ ให้โจทก์มีคำขอต่อศาลภายในสิบห้าวันนับแต่ระยะเวลาที่กำหนดให้จำเลยยื่นคำให้การได้สิ้นสุดลง เพื่อให้ศาลมีคำพิพากษาหรือคำสั่งชี้ขาดให้ตนเป็นฝ่ายชนะคดีโดยขาดนัด",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าโจทก์ไม่ยื่นคำขอต่อศาลภายในกำหนดระยะเวลาดังกล่าวแล้ว ให้ศาลมีคำสั่งจำหน่ายคดีนั้นเสียจากสารบบความ",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "ถ้าโจทก์ยื่นคำขอต่อศาลภายในกำหนดระยะเวลาดังกล่าวแล้ว ให้ศาลมีคำพิพากษาหรือคำสั่งชี้ขาดคดีโดยขาดนัดไปตามมาตรา ๑๙๘ ทวิ แต่ถ้าศาลมีเหตุสงสัยว่าจำเลยจะไม่ทราบหมายเรียกให้ยื่นคำให้การ ก็ให้ศาลมีคำสั่งให้มีการส่งหมายเรียกใหม่ โดยวิธีส่งหมายธรรมดาหรือโดยวิธีอื่นแทน และจะกำหนดเงื่อนไขอย่างใดตามที่เห็นสมควรเพื่อให้จำเลยได้ทราบหมายเรียกนั้นก็ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        }
+    ]
 }

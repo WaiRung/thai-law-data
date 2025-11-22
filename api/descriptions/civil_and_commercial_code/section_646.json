@@ -1,18 +1,11 @@
 {
     "id": "มาตรา 646",
-    "title": "เรียกคืนทรัพย์สินที่ยืม",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้ามิได้กำหนดเวลากันไว้ ท่านให้คืนทรัพย์สินที่ยืมเมื่อผู้ยืมได้ใช้สอยทรัพย์สินนั้นเสร็จแล้วตามการอันปรากฏในสัญญา แต่ผู้ให้ยืมจะเรียกคืนก่อนนั้นก็ได้ เมื่อเวลาได้ล่วงไปพอแก่การที่ผู้ยืมจะได้ใช้สอยทรัพย์สินนั้นเสร็จแล้ว",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าเวลาก็มิได้กำหนดกันไว้ ทั้งในสัญญาก็ไม่ปรากฏว่ายืมไปใช้เพื่อการใดไซร้ ท่านว่าผู้ให้ยืมจะเรียกของคืนเมื่อไรก็ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

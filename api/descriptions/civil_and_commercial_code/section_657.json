@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 657",
-    "title": "สัญญาฝากทรัพย์",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "อันว่าฝากทรัพย์นั้น คือสัญญาซึ่งบุคคลคนหนึ่ง เรียกว่าผู้ฝาก ส่งมอบทรัพย์สินให้แก่บุคคลอีกคนหนึ่ง เรียกว่าผู้รับฝาก และผู้รับฝากตกลงว่าจะเก็บรักษาทรัพย์สินนั้นไว้ในอารักขาแห่งตน แล้วจะคืนให้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        }
+    ]
 }

@@ -1,18 +1,11 @@
 {
     "id": "มาตรา 1033",
-    "title": "หุ้นส่วนมิได้ตกลง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าผู้เป็นหุ้นส่วนมิได้ตกลงกันไว้ในกระบวนจัดการห้างหุ้นส่วนไซร้ ท่านว่าผู้เป็นหุ้นส่วนย่อมจัดการห้างหุ้นส่วนนั้นได้ทุกคน แต่ผู้เป็นหุ้นส่วนคนหนึ่งคนใดจะเข้าทำสัญญาอันใดซึ่งผู้เป็นหุ้นส่วนอีกคนหนึ่งทักท้วงนั้นไม่ได้",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ในกรณีเช่นนี้ ท่านให้ถือว่าผู้เป็นหุ้นส่วนย่อมเป็นหุ้นส่วนผู้จัดการทุกคน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

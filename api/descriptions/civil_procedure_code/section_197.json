@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 197",
-    "title": "ถือว่าจำเลยขาดนัดยื่นคำให้การ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "เมื่อจำเลยได้รับหมายเรียกให้ยื่นคำให้การแล้ว จำเลยมิได้ยื่นคำให้การภายในระยะเวลาที่กำหนดไว้ตามกฎหมายหรือตามคำสั่งศาล ให้ถือว่าจำเลยขาดนัดยื่นคำให้การ",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

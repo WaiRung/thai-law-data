@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 676",
-    "title": "ทรัพย์สินของแขกอาศัยสูญหายหรือบุบสลาย ต้องแจ้งต่อเจ้าสำนักโรงแรมทันที",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ทรัพย์สินซึ่งมิได้นำฝากบอกราคาชัดแจ้งนั้น เมื่อพบเห็นว่าสูญหายหรือบุบสลายขึ้น คนเดินทางหรือแขกอาศัยต้องแจ้งความนั้นต่อเจ้าสำนักโรงแรม โฮเต็ล หรือสถานที่เช่นนั้นทันที มิฉะนั้นท่านว่าเจ้าสำนักย่อมพ้นจากความรับผิดดังบัญญัติไว้ในมาตรา ๖๗๔ และมาตรา ๖๗๕",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

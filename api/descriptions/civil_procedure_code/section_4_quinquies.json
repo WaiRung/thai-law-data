@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 4 เบญจ",
-    "title": "การร้องขอเกี่ยวกับนิติบุคคล",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "คำร้องขอเพิกถอนมติของที่ประชุมหรือที่ประชุมใหญ่ของนิติบุคคล คำร้องขอเลิกนิติบุคคล คำร้องขอตั้งหรือถอนผู้ชำระบัญชีของนิติบุคคล หรือคำร้องขออื่นใดเกี่ยวกับนิติบุคคล\n                    ให้เสนอต่อศาลที่นิติบุคคลนั้นมีสำนักงานแห่งใหญ่อยู่ในเขตศาล",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        }
+    ]
 }

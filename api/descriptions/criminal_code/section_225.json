@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 225",
-    "title": "กระทำให้เกิดเพลิงไหม้โดยประมาท",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดกระทำให้เกิดเพลิงไหม้โดยประมาท และเป็นเหตุให้ทรัพย์ของผู้อื่นเสียหาย หรือการกระทำโดยประมาทนั้นน่าจะเป็นอันตรายแก่ชีวิตของบุคคลอื่น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        }
+    ]
 }

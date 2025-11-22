@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 214",
-    "title": "เลิกอั้งยี่หรือซ่องโจร",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าอั้งยี่หรือซ่องโจรได้เลิกกิจการไปแล้ว ผู้ใดเป็นหัวหน้า ผู้จัดการ หรือผู้มีตำแหน่งหน้าที่ในอั้งยี่หรือซ่องโจรนั้น ต้องระวางโทษจำคุกไม่เกินห้าปี",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

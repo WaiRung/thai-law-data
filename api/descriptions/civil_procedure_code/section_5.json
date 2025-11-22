@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 5",
-    "title": "คำฟ้องหรือคำร้องขอซึ่งอาจเสนอต่อศาลได้สองศาลหรือกว่านั้น",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "คำฟ้องหรือคำร้องขอซึ่งอาจเสนอต่อศาลได้สองศาลหรือกว่านั้น ไม่ว่าจะเป็นเพราะภูมิลำเนาของบุคคลก็ดี เพราะที่ตั้งของทรัพย์สินก็ดี เพราะสถานที่ที่เกิดมูลคดีก็ดี หรือเพราะมีข้อหาหลายข้อก็ดี ถ้ามูลความแห่งคดีเกี่ยวข้องกัน โจทก์หรือผู้ร้องจะเสนอคำฟ้องหรือคำร้องขอต่อศาลใดศาลหนึ่งเช่นว่านั้นก็ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

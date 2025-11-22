@@ -1,24 +1,17 @@
 {
     "id": "มาตรา 1077",
-    "title": "ห้างหุ้นส่วนจำกัด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "อันห้างหุ้นส่วนจำกัดนั้น คือห้างหุ้นส่วนประเภทหนึ่งซึ่งมีผู้เป็นหุ้นส่วนสองจำพวกดังจะกล่าวต่อไปนี้ คือ",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "ผู้เป็นหุ้นส่วนคนเดียวหรือหลายคนซึ่งมีจำกัดความรับผิดเพียงไม่เกินจำนวนเงินที่ตนรับจะลงหุ้นในห้างหุ้นส่วนนั้นจำพวกหนึ่ง และ",
-                        "subsections": null
-                    },
-                    {
-                        "id": 2,
-                        "content": "ผู้เป็นหุ้นส่วนคนเดียวหรือหลายคนซึ่งต้องรับผิดร่วมกันในบรรดาหนี้ของห้างหุ้นส่วนไม่มีจำกัดจำนวนอีกจำพวกหนึ่ง",
-                        "subsections": null
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

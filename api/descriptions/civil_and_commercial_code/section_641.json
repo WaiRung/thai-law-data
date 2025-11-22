@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 641",
-    "title": "สัญญายืมใช้คงรูปบริบูรณ์",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "การให้ยืมใช้คงรูปนั้น ท่านว่าย่อมบริบูรณ์ต่อเมื่อส่งมอบทรัพย์สินซึ่งให้ยืม",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

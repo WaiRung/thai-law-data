@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1035",
-    "title": "ถ้าได้ตกลงกันไว้ว่าจะให้ผู้เป็นหุ้นส่วนหลายคนจัดการห้างหุ้นส่วน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าได้ตกลงกันไว้ว่าจะให้ผู้เป็นหุ้นส่วนหลายคนจัดการห้างหุ้นส่วนไซร้ หุ้นส่วนผู้จัดการแต่ละคนจะจัดการห้างหุ้นส่วนนั้นก็ได้ แต่หุ้นส่วนผู้จัดการคนหนึ่งคนใดจะทำการอันใดซึ่งหุ้นส่วนผู้จัดการอีกคนหนึ่งทักท้วงนั้นไม่ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

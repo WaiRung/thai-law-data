@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 172",
-    "title": "แจ้งความเท็จเกี่ยวกับความผิดอาญา",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดแจ้งข้อความอันเป็นเท็จเกี่ยวกับความผิดอาญา แก่พนักงานอัยการ ผู้ว่าคดี พนักงานสอบสวน หรือเจ้าพนักงานผู้มีอำนาจสืบสวนคดีอาญา ซึ่งอาจทำให้ผู้อื่นหรือประชาชนเสียหาย",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

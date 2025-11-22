@@ -1,18 +1,17 @@
 {
     "id": "มาตรา 268",
-    "title": "ใช้เอกสารปลอม",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดใช้หรืออ้างเอกสารอันเกิดจากการกระทำความผิดตามมาตรา ๒๖๔ มาตรา ๒๖๕ มาตรา ๒๖๖ หรือมาตรา ๒๖๗ ในประการที่น่าจะเกิดความเสียหายแก่ผู้อื่นหรือประชาชน ต้องระวางโทษดังที่บัญญัติไว้ในมาตรานั้น ๆ",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าผู้กระทำความผิดตามวรรคแรกเป็นผู้ปลอมเอกสารนั้น หรือเป็นผู้แจ้งให้เจ้าพนักงานจดข้อความนั้นเองให้ลงโทษตามมาตรานี้แต่กระทงเดียว",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

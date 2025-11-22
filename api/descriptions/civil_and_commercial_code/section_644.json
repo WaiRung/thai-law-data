@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 644",
-    "title": "ผู้ยืมจำต้องสงวนทรัพย์สินซึ่งยืม",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ยืมจำต้องสงวนทรัพย์สินซึ่งยืมไปเหมือนเช่นวิญญูชนจะพึงสงวนทรัพย์สินของตนเอง",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

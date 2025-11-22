@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1079",
-    "title": "หุ้นส่วนจำกัดไม่จดทะเบียน",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": " อันห้างหุ้นส่วนจำกัดนั้น ถ้ายังมิได้จดทะเบียนอยู่ตราบใดท่านให้ถือว่าเป็นห้างหุ้นส่วนสามัญซึ่งผู้เป็นหุ้นส่วนทั้งหมดย่อมต้องรับผิดร่วมกันในบรรดาหนี้ของห้างหุ้นส่วนโดยไม่มีจำกัดจำนวน จนกว่าจะได้จดทะเบียน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+    ]
 }

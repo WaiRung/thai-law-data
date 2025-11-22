@@ -1,23 +1,14 @@
 {
     "id": "มาตรา 1129",
-    "title": "การโอนหุ้นชนิดระบุชื่อ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "อันว่าหุ้นนั้นย่อมโอนกันได้โดยมิต้องได้รับความยินยอมของบริษัท เว้นแต่เมื่อเป็นหุ้นชนิดระบุชื่อลงในใบหุ้น ซึ่งมีข้อบังคับของบริษัทกำหนดไว้เป็นอย่างอื่น",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "การโอนหุ้นชนิดระบุชื่อลงในใบหุ้นนั้น ถ้ามิได้ทำเป็นหนังสือและลงลายมือชื่อของผู้โอนกับผู้รับโอน มีพยานคนหนึ่งเป็นอย่างน้อยลงชื่อรับรองลายมือนั้น ๆ ด้วยแล้ว ท่านว่าเป็นโมฆะ อนึ่ง ตราสารอันนั้นต้องแถลงเลขหมายของหุ้นซึ่งโอนกันนั้นด้วย",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "การโอนเช่นนี้จะนำมาใช้แก่บริษัทหรือบุคคลภายนอกไม่ได้ จนกว่าจะได้จดแจ้งการโอนทั้งชื่อและสำนักของผู้รับโอนนั้นลงในทะเบียนผู้ถือหุ้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        }
+    ]
 }

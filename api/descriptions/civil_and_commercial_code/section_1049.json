@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1049",
-    "title": "กิจการค้าขายซึ่งไม่ปรากฏชื่อ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": " ผู้เป็นหุ้นส่วนจะถือเอาสิทธิใด ๆ แก่บุคคลภายนอกในกิจการค้าขายซึ่งไม่ปรากฏชื่อของตนนั้นหาได้ไม่",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

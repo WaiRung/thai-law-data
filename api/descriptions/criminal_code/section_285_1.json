@@ -1,13 +1,11 @@
 {
     "id": "มาตรา 285/1",
-    "title": "อ้างความไม่รู้อายุเด็กเพื่อให้พ้นจากความผิดไม่ได้",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "การกระทำความผิดตามมาตรา ๒๗๗ มาตรา ๒๗๙ มาตรา ๒๘๒ วรรคสาม มาตรา ๒๘๓ วรรคสาม และมาตรา ๒๘๓ ทวิ วรรคสอง หากเป็นการกระทำต่อเด็กอายุไม่เกินสิบสามปี ห้ามอ้างความไม่รู้อายุของเด็กเพื่อให้พ้นจากความผิดนั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

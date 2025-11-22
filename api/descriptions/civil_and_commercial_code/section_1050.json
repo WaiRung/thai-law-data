@@ -1,13 +1,17 @@
 {
     "id": "มาตรา 1050",
-    "title": "การใด ๆ อันผู้เป็นหุ้นส่วนคนใดคนหนึ่งได้จัดทำไปในทางที่เป็นธรรมดาการค้าขาย",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "การใด ๆ อันผู้เป็นหุ้นส่วนคนใดคนหนึ่งได้จัดทำไปในทางที่เป็นธรรมดาการค้าขายของห้างหุ้นส่วนนั้น ท่านว่าผู้เป็นหุ้นส่วนหมดทุกคนย่อมมีความผูกพันในการนั้น ๆ ด้วย และจะต้องรับผิดร่วมกันโดยไม่จำกัดจำนวนในการชำระหนี้ อันได้ก่อให้เกิดขึ้นเพราะจัดการไปเช่นนั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

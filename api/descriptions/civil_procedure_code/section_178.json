@@ -1,18 +1,14 @@
 {
     "id": "มาตรา 178",
-    "title": "คำให้การแก้ฟ้องแย้ง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ถ้าจำเลยฟ้องแย้งรวมในคำให้การ ให้โจทก์ทำคำให้การแก้ฟ้องแย้งยื่นต่อศาลภายในสิบห้าวันนับแต่วันที่ได้ส่งคำให้การถึงโจทก์",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "บทบัญญัติแห่งมาตราก่อน ให้ใช้บังคับแก่คำให้การแก้ฟ้องแย้งนี้โดยอนุโลม",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]
 }

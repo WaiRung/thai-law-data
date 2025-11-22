@@ -1,18 +1,14 @@
 {
     "id": "มาตรา 264",
-    "title": "ปลอมเอกสาร",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดทำเอกสารปลอมขึ้นทั้งฉบับหรือแต่ส่วนหนึ่งส่วนใด เติมหรือตัดทอนข้อความ หรือแก้ไขด้วยประการใด ๆ ในเอกสารที่แท้จริง หรือประทับตราปลอม หรือลงลายมือชื่อปลอมในเอกสาร โดยประการที่น่าจะเกิดความเสียหายแก่ผู้อื่นหรือประชาชน ถ้าได้กระทำเพื่อให้ผู้หนึ่งผู้ใดหลงเชื่อว่าเป็นเอกสารที่แท้จริง ผู้นั้นกระทำความผิดฐานปลอมเอกสาร",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ผู้ใดกรอกข้อความลงในแผ่นกระดาษหรือวัตถุอื่นใดซึ่งมีลายมือชื่อของผู้อื่นโดยไม่ได้รับความยินยอม หรือโดยฝ่าฝืนคำสั่งของผู้อื่นนั้น ถ้าได้กระทำเพื่อนำเอาเอกสารนั้นไปใช้ในกิจการที่อาจเกิดเสียหายแก่ผู้หนึ่งผู้ใดหรือประชาชน ให้ถือว่าผู้นั้นปลอมเอกสาร ต้องระวางโทษเช่นเดียวกัน",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

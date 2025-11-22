@@ -1,18 +1,14 @@
 {
     "id": "มาตรา 653",
-    "title": "การกู้ยืมเงินกว่าสองพันบาทขึ้นไป ต้องมีหลักฐานเป็นหนังสือลงลายมือชื่อผู้ยืม",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "การกู้ยืมเงินกว่าสองพันบาทขึ้นไปนั้น ถ้ามิได้มีหลักฐานแห่งการกู้ยืมเป็นหนังสืออย่างใดอย่างหนึ่งลงลายมือชื่อผู้ยืมเป็นสำคัญ จะฟ้องร้องให้บังคับคดีหาได้ไม่",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ในการกู้ยืมเงินมีหลักฐานเป็นหนังสือนั้น ท่านว่าจะนำสืบการใช้เงินได้ต่อเมื่อมีหลักฐานเป็นหนังสืออย่างใดอย่างหนึ่งลงลายมือชื่อผู้ให้ยืมมาแสดง หรือเอกสารอันเป็นหลักฐานแห่งการกู้ยืมนั้นได้เวนคืนแล้ว หรือได้แทงเพิกถอนลงในเอกสารนั้นแล้ว",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
 }

@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 1025",
-    "title": "ห้างหุ้นส่วนสามัญ",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "อันว่าห้างหุ้นส่วนสามัญนั้น คือห้างหุ้นส่วนประเภทซึ่งผู้เป็นหุ้นส่วนหมดทุกคนต้องรับผิดร่วมกันเพื่อหนี้ทั้งปวงของหุ้นส่วนโดยไม่มีจำกัด",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        }
+    ]
 }

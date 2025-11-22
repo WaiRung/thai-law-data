@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 216",
-    "title": "สั่งผู้ที่มั่วสุมให้เลิกไป แต่ไม่เลิก",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "เมื่อเจ้าพนักงานสั่งผู้ที่มั่วสุมเพื่อกระทำความผิดตามมาตรา ๒๑๕ ให้เลิกไป ผู้ใดไม่เลิก",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]
 }

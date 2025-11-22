@@ -1,23 +1,11 @@
 {
     "id": "มาตรา 224",
-    "title": "ดอกเบี้ยในระหว่างเวลาผิดนัด",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "หนี้เงินนั้น ให้คิดดอกเบี้ยในระหว่างเวลาผิดนัดในอัตราที่กำหนดตามมาตรา ๗ บวกด้วยอัตราเพิ่มร้อยละสองต่อปี ถ้าเจ้าหนี้อาจจะเรียกดอกเบี้ยได้สูงกว่านั้นโดยอาศัยเหตุอย่างอื่นอันชอบด้วยกฎหมาย ก็ให้คงส่งดอกเบี้ยต่อไปตามนั้น",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ห้ามมิให้คิดดอกเบี้ยซ้อนดอกเบี้ยในระหว่างผิดนัด",
-                "subsections": null
-            },
-            {
-                "id": 3,
-                "content": "การพิสูจน์ค่าเสียหายอย่างอื่นนอกจากนั้น ให้พิสูจน์ได้",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
 }

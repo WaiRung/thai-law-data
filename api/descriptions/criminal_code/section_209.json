@@ -1,18 +1,14 @@
 {
     "id": "มาตรา 209",
-    "title": "อั้งยี่",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ผู้ใดเป็นสมาชิกของคณะบุคคลซึ่งปกปิดวิธีดำเนินการและมีความมุ่งหมายเพื่อการอันมิชอบด้วยกฎหมาย ผู้นั้นกระทำความผิดฐานเป็นอั้งยี่",
-                "subsections": null
-            },
-            {
-                "id": 2,
-                "content": "ถ้าผู้กระทำความผิดเป็นหัวหน้า ผู้จัดการหรือผู้มีตำแหน่งหน้าที่ในคณะบุคคลนั้น",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }

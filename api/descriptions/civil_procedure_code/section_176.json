@@ -1,13 +1,14 @@
 {
     "id": "มาตรา 176",
-    "title": "ผลการทิ้งฟ้อง",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "การทิ้งคำฟ้องหรือถอนคำฟ้องย่อมลบล้างผลแห่งการยื่นคำฟ้องนั้น รวมทั้งกระบวนพิจารณาอื่น ๆ อันมีมาต่อภายหลังยื่นคำฟ้อง และกระทำให้คู่ความกลับคืนเข้าสู่ฐานะเดิมเสมือนหนึ่งมิได้มีการยื่นฟ้องเลย แต่ว่าคำฟ้องใด ๆ ที่ได้ทิ้งหรือถอนแล้ว อาจยื่นใหม่ได้ ภายใต้บังคับแห่งบทบัญญัติของกฎหมายว่าด้วยอายุความ",
-                "subsections": null
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        },
+        {
+            "content": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        }
+    ]
 }

@@ -1,22 +1,14 @@
 {
     "id": "มาตรา 2",
-    "title": "การพิจารณาคดี",
-    "content": {
-        "paragraphs": [
-            {
-                "id": 1,
-                "content": "ห้ามมิให้เสนอคำฟ้องต่อศาลใด เว้นแต่",
-                "subsections": [
-                    {
-                        "id": 1,
-                        "content": "เมื่อได้พิจารณาถึงสภาพแห่งคำฟ้องและชั้นของศาลแล้ว ปรากฏว่า ศาลนั้นมีอำนาจที่จะพิจารณาพิพากษาคดีนั้นได้ตามบทบัญญัติแห่งกฎหมายว่าด้วยพระธรรมนูญศาลยุติธรรม และ"
-                    },
-                    {
-                        "id": 2,
-                        "content": "เมื่อได้พิจารณาถึงคำฟ้องแล้ว ปรากฏว่าคดีนั้นอยู่ในเขตศาลนั้นตามบทบัญญัติแห่งประมวลกฎหมายนี้ว่าด้วยศาลที่จะรับคำฟ้อง และตามบทบัญญัติแห่งกฎหมายที่กำหนดเขตศาลด้วย"
-                    }
-                ]
-            }
-        ]
-    }
+    "descriptions": [
+        {
+            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+        },
+        {
+            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    ]
 }
