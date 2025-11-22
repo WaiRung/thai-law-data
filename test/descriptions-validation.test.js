@@ -63,8 +63,21 @@ configs.forEach(config => {
         `  Has expected count: ${files.length} === ${config.expectedCount}`);
     
     // Test 4: Load source file and validate each section
-    const sourceData = JSON.parse(fs.readFileSync(sourceFilePath, 'utf8'));
-    const sourceSections = sourceData[config.sourceKey];
+    let sourceData, sourceSections;
+    try {
+        sourceData = JSON.parse(fs.readFileSync(sourceFilePath, 'utf8'));
+        sourceSections = sourceData[config.sourceKey];
+        
+        if (!sourceSections) {
+            console.error(`  Source file missing key: ${config.sourceKey}`);
+            console.log('');
+            return;
+        }
+    } catch (error) {
+        console.error(`  Error reading source file: ${error.message}`);
+        console.log('');
+        return;
+    }
     
     // Test 5: Each JSON file is valid and contains proper structure
     let allFilesValid = true;
