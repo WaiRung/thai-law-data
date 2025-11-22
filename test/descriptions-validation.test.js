@@ -82,12 +82,16 @@ configs.forEach(config => {
     // Test 5: Each JSON file is valid and contains proper structure
     let allFilesValid = true;
     let allContentValid = true;
+    const parsedFiles = {};
     
     files.forEach((file, index) => {
         try {
             const filePath = path.join(folderPath, file);
             const fileContent = fs.readFileSync(filePath, 'utf8');
             const data = JSON.parse(fileContent);
+            
+            // Cache parsed data for later use
+            parsedFiles[file] = data;
             
             // Check required properties
             if (!data.id || !data.descriptions) {
@@ -99,6 +103,9 @@ configs.forEach(config => {
             if (!Array.isArray(data.descriptions)) {
                 allContentValid = false;
                 console.error(`    ${file} descriptions is not an array`);
+            } else if (data.descriptions.length === 0) {
+                allContentValid = false;
+                console.error(`    ${file} descriptions array is empty`);
             } else {
                 // Check each description has content
                 data.descriptions.forEach((desc, descIndex) => {
@@ -117,13 +124,11 @@ configs.forEach(config => {
     assert(allFilesValid, `  All JSON files are valid and have required properties`);
     assert(allContentValid, `  All JSON files have proper descriptions structure`);
     
-    // Test 6: Verify all sections from source exist as files
+    // Test 6: Verify all sections from source exist as files (using cached data)
     let allSectionsExist = true;
     sourceSections.forEach((section, index) => {
-        // Find corresponding file
-        const found = files.some(file => {
-            const filePath = path.join(folderPath, file);
-            const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        // Find corresponding file using cached data
+        const found = Object.values(parsedFiles).some(fileData => {
             return fileData.id === section.id;
         });
         
