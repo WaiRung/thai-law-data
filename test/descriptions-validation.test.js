@@ -109,7 +109,7 @@ configs.forEach(config => {
             } else {
                 // Check each description has content property
                 data.descriptions.forEach((desc, descIndex) => {
-                    if (!desc.hasOwnProperty('content')) {
+                    if (!('content' in desc)) {
                         allContentValid = false;
                         console.error(`    ${file} description ${descIndex} missing content property`);
                     }
