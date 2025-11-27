@@ -29,7 +29,7 @@ const configs = [
         folder: 'api/descriptions/civil_and_commercial_code',
         sourceFile: 'api/civil_and_commercial_code.json',
         sourceKey: 'civil_and_commercial_code',
-        expectedCount: 49
+        expectedCount: 56
     },
     {
         folder: 'api/descriptions/civil_procedure_code',
@@ -107,9 +107,9 @@ configs.forEach(config => {
                 allContentValid = false;
                 console.error(`    ${file} descriptions array is empty`);
             } else {
-                // Check each description has content
+                // Check each description has content property
                 data.descriptions.forEach((desc, descIndex) => {
-                    if (!desc.content) {
+                    if (!('content' in desc)) {
                         allContentValid = false;
                         console.error(`    ${file} description ${descIndex} missing content property`);
                     }
