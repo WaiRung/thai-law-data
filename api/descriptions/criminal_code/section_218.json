@@ -2,10 +2,16 @@
     "id": "มาตรา 218",
     "descriptions": [
         {
-            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+            "content": "ตึกแถว แม้ห้องที่เผาไม่มีคนอยู่ แต่ห้องข้างเคียงมีคนอาศัย ถือเป็นโรงเรือนที่มีคนอยู่อาศัย"
         },
         {
-            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+            "content": "ยังไปๆ มาๆ และมีเตียงตู้ ถือเป็นโรงเรือนที่มีคนอยู่อาศัย"
+        }
+        {
+            "content": "เผาทรัพย์ นอก-ในโรงเรือน โดยเล็งเห็นได้ว่าจะไหม้โรงเรือน ถือว่ามีเจตนาวางเพลิงเผาโรงเรือนที่มีคนอยู่อาศัย"
+        },
+        {
+            "content": "ฟาง ไม่ใช่สินค้าไว้ขาย แต่เอาไว้เลี้ยงวัว โรงเก็บฟางไม่ใช่โรงเรือนที่เก็บสินค้า"
         }
     ]
 }
