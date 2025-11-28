@@ -2,16 +2,13 @@
     "id": "มาตรา 217",
     "descriptions": [
         {
-            "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "content": "ต้องมีการวางเพลิง (ทำให้ไฟไหม้เป็นวงกว้าง) + เผาทรัพย์ด้วย เผาทรัพย์อย่างเดียวไม่ผิด"
         },
         {
-            "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "content": "หากยังไม่ติดไฟ เป็นการพยายาม แต่หากไฟติดแล้ว แม้ไม่ลุกลามก็ถือว่าความผิดสำเร็จแล้ว"
         },
         {
-            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
-        {
-            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            "content": "หากเป็นเจ้าของรวมอยู่ด้วย ไม่ถือเป็นทรัพย์ของผู้อื่น ไม่ผิดมาตรานี้"
         }
     ]
 }
