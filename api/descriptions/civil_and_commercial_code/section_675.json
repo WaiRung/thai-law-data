@@ -2,13 +2,16 @@
     "id": "มาตรา 675",
     "descriptions": [
         {
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "content": "รับผิดตามราคาท้องตลาด ในเวลาเกิดเหตุ ดอกเบี้ยไม่รับผิด เป็นภาระส่วนตัว"
         },
         {
-            "content": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            "content": "รถ โทรศัพท์ แม้มีราคาสูงก็ไม่จัดเป็นของมีค่า"
         },
         {
-            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+            "content": "ถ้าเป็นของมีค่า รับผิดทุกชิ้นรวมกัน 5000 บาท"
+        },
+        {
+            "content": "ให้เก็บในเซฟ ไม่เป็นกรณีฝากและได้บอกราคาแห่งของนั้นชัดแจ้ง"
         }
     ]
 }
