@@ -2,16 +2,14 @@
     "id": "มาตรา 676",
     "descriptions": [
         {
-            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+            "content": "ไม่ต้องแจ้งขณะเข้าพัก / แจ้งก่อนเกิดเหตุ"
         },
         {
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "content": "ทันทีที่ทราบเหตุ มิใช่ทันทีที่สูญหาย หรือบุบสลาย"
         },
         {
-            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
-        },
-        {
-            "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+            "content": "ภายในครึ่งชั่วโมง ยังถือเป็นทันทีที่ทราบเหตุ"
         }
+        
     ]
 }
