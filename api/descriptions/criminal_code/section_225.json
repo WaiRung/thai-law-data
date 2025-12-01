@@ -2,16 +2,13 @@
     "id": "มาตรา 225",
     "descriptions": [
         {
-            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+            "content": "ทำให้เกิดเพลิงไหม่ คือเพลิงที่ลุกลาม ไม่สามารถควบคุมได้"
         },
         {
-            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+            "content": "โดยประมาท คือจุดไฟหรือใช้เครื่องใช้ไฟฟ้าเท่านั้น ไม่เจตนาให้เกิดเพลิงลุกลาม"
         },
         {
-            "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-        },
-        {
-            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+            "content": "ต้องมีทรัพย์สินเสียหายจริงๆ หรือน่าจะเป็นอันตรายต่อชีวิต"
         }
     ]
 }
