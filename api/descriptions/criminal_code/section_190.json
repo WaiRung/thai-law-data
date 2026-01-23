@@ -2,10 +2,19 @@
     "id": "มาตรา 190",
     "descriptions": [
         {
-            "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            "content": "พนักงานสอบสวนกำลังจะจับ หลอกว่าจะทำธุระแล้ววิ่งหนี พนักงานสอบสวนวิ่งตาม ถือว่ายังไม่ถูกคุมขัง ไม่ผิดมาตรานี้"
         },
         {
-            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+            "content": "ต้องถูกคุม ขัง แม้จะบันทึกการจับ หรือบออกกล่าวการจับ แต่ไม่คุมตัว หรือปล่อยให้เดินไปโรงพักเอง ถือว่ายังไม่ถูกคุมขัง ไม่ผิดมาตรานี้"
+        },
+        {
+            "content": "ถูกตำรวจคุมตัว แม้วิ่งไปก้าวเดียว ก็เป็นการหลบหนีสำเร็จแล้ว"
+        },
+        {
+            "content": "หรือถูกคุมไว้ในห้อง ก้าวออกจากห้องก็เป็นความผิดแล้ว"
+        },
+        {
+            
         }
     ]
 }
