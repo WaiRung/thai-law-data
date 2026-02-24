@@ -1,1 +1,30 @@
-RULE OF THE GENERAL ASSEMBLY OF JUDGES OF THE SUPREME ADMINISTRATIVE COURT ON ADMINISTRATIVE COURT PROCEDURE
+
+{
+    "rule_of_the_general_assembly_of_judges_of_the_supreme_administrative_court_on_administrative_court_procedure": [
+      {
+            "id": "มาตรา 5",
+            "title": "วิธีพิจารณาโดยใช้ระบบไต่สวน",
+            "content": {
+                "paragraphs": [
+                    {
+                        "id": 1,
+                        "content": "วิธีพิจารณาคดีปกครองเป็นวิธีพิจารณาโดยใช้ระบบไต่สวนตามที่กําหนดไว้ในกฎหมายว่าด้วยการจัดตั้งศาลปกครองและวิธีพิจารณาคดีปกครองและระเบียบนี้"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "มาตรา 62",
+            "title": "หากเห็นว่าไม่มีกรณีที่จะต้องแสวงหาข้อเท็จจริงเพิ่มสิ้นสุด",
+            "content": {
+                "paragraphs": [
+                    {
+                        "id": 1,
+                        "content": "เมื่อองค์คณะได้รับสำนวนคดีจากตุลาการเจ้าของสำนวนแล้ว หากเห็นว่าไม่มีกรณีที่จะต้องแสวงหาข้อเท็จจริงเพิ่มเติม ให้ตุลาการหัวหน้าคณะมีคําสั่งกำหนดวันหนึ่งวันใดเป็นวันสิ้นสุดการแสวงหาข้อเท็จจริงในคดีนั้น",
+                        "subsections": null
+                    }
+                ]
+            }
+        }
+    ]
+}
